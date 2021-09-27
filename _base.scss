@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@600&display=swap');
+
+
+$font-family: "Ruda", sans-serif;
+
+$color-base: #071A52;
+$color-primary-lime: #A7FF83;
+$color-secondary-green: #17B978;
+$color-tertiary-red: #F62A00;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+  letter-spacing: 0.75px;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+

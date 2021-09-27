@@ -1,0 +1,20 @@
+body {
+  background-color: #071A52;
+}
+
+
+.introduction_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 900px;
+  left: 290px;
+  top: 62px;
+  border-radius: 50% 50%;
+
+  background: rgba(167, 255, 131, 0.87);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
