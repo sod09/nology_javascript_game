@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@600&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Ruda:wght@600&display=swap");
 
 $font-family: "Ruda", sans-serif;
 
-$color-base: #071A52;
-$color-primary-lime: #A7FF83;
-$color-secondary-green: #17B978;
-$color-tertiary-red: #F62A00;
+$color-base: #071a52;
+$color-primary-lime: #a7ff83;
+$color-secondary-green: #17b978;
+$color-tertiary-red: #f62a00;
 $color-white: #ffffff;
+$color-black: #343434;
 
 * {
   margin: 0;
@@ -23,4 +23,3 @@ a:link,
 a:visited {
   text-decoration: none;
 }
-

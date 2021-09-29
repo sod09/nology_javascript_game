@@ -40,7 +40,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #17B978;
+  background-color: #17b978;
   border: solid #ffffff 10px;
   border-radius: 10px;
   padding: 20px 20px;
@@ -54,7 +54,7 @@ body {
   border-radius: 10px;
 }
 .intro__container .intro__inputcontainer .intro__button {
-  background-color: #F62A00;
+  background-color: #f62a00;
   text-align: center;
   font-size: 56px;
   font-weight: bold;
@@ -70,7 +70,7 @@ body {
 }
 .instructions__container .instructions__content {
   color: #ffffff;
-  background-color: #17B978;
+  background-color: #17b978;
   border: solid #ffffff 10px;
   border-radius: 10px;
   width: 70%;
@@ -95,87 +95,126 @@ body {
   padding: 50px;
 }
 
-.grid {
+.flag__container {
+  background-color: #17b978;
+  border: solid #ffffff 10px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+.flag__container .score__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 10px 10px;
+}
+.flag__container .score__container .flag__instructions {
+  background-color: #ffffff;
+  border: solid #071a52 10px;
+  border-radius: 10px;
+  width: 25%;
+  text-align: center;
+  font-size: 25px;
+}
+.flag__container .score__container .flag__flagtotal {
+  background-color: #ffffff;
+  border: solid #071a52 10px;
+  border-radius: 10px;
+  width: 25%;
+  text-align: center;
+  font-size: 25px;
+}
+.flag__container .score__container .flag__score {
+  background-color: #f62a00;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 25px;
+}
+.flag__container .score__container .flag__timer {
+  background-color: #f62a00;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 25px;
+}
+.flag__container .flag__grid {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 2vw;
-  grid-template-areas: "ireland italy colombia netherlands united-kingdom norway" "croatia puerto-rico ireland2 mauritius puerto-rico2 paraguay" "netherlands2 norway2 united-kingdom2 italy2 mauritius2 hungary" "paraguay2 hungary2 mexico2 colombia2 croatia2 mexico2";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 1vw;
+  grid-template-areas: "ireland italy colombia netherlands united-kingdom norway" "croatia puerto-rico ireland2 mauritius puerto-rico2 paraguay" "netherlands2 norway2 united-kingdom2 italy2 mauritius2 hungary" "paraguay2 hungary2 mexico colombia2 croatia2 mexico2";
 }
-.grid .img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.grid #ireland {
+.flag__container .flag__grid #ireland {
   grid-area: ireland;
 }
-.grid #ireland2 {
+.flag__container .flag__grid #ireland2 {
   grid-area: ireland2;
 }
-.grid #italy {
+.flag__container .flag__grid #italy {
   grid-area: italy;
 }
-.grid #italy2 {
+.flag__container .flag__grid #italy2 {
   grid-area: italy2;
 }
-.grid #colombia {
+.flag__container .flag__grid #colombia {
   grid-area: colombia;
 }
-.grid #colombia2 {
+.flag__container .flag__grid #colombia2 {
   grid-area: colombia2;
 }
-.grid #netherlands {
+.flag__container .flag__grid #netherlands {
   grid-area: netherlands;
 }
-.grid #netherlands2 {
+.flag__container .flag__grid #netherlands2 {
   grid-area: netherlands2;
 }
-.grid #norway {
+.flag__container .flag__grid #norway {
   grid-area: norway;
 }
-.grid #norway2 {
+.flag__container .flag__grid #norway2 {
   grid-area: norway2;
 }
-.grid #united-kingdom {
+.flag__container .flag__grid #united-kingdom {
   grid-area: united-kingdom;
 }
-.grid #united-kingdom2 {
+.flag__container .flag__grid #united-kingdom2 {
   grid-area: united-kingdom2;
 }
-.grid #croatia {
+.flag__container .flag__grid #croatia {
   grid-area: croatia;
 }
-.grid #croatia2 {
+.flag__container .flag__grid #croatia2 {
   grid-area: croatia2;
 }
-.grid #mexico {
+.flag__container .flag__grid #mexico {
   grid-area: mexico;
 }
-.grid #mexico2 {
+.flag__container .flag__grid #mexico2 {
   grid-area: mexico2;
 }
-.grid #mauritus {
+.flag__container .flag__grid #mauritus {
   grid-area: mauritius;
 }
-.grid #mauritus2 {
+.flag__container .flag__grid #mauritus2 {
   grid-area: mauritius2;
 }
-.grid #puerto-rico {
+.flag__container .flag__grid #puerto-rico {
   grid-area: puerto-rico;
 }
-.grid #puerto-rico2 {
+.flag__container .flag__grid #puerto-rico2 {
   grid-area: puerto-rico2;
 }
-.grid #paraguay {
+.flag__container .flag__grid #paraguay {
   grid-area: paraguay;
 }
-.grid #paraguay2 {
+.flag__container .flag__grid #paraguay2 {
   grid-area: paraguay2;
 }
-.grid #hungary {
+.flag__container .flag__grid #hungary {
   grid-area: hungary;
 }
-.grid #hungary2 {
+.flag__container .flag__grid #hungary2 {
   grid-area: hungary2;
 }
