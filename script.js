@@ -2,13 +2,32 @@
 
 // UI variables
 
-const nameInput = document.querySelector(".intro__nameinput");
+// const nameInput = document.querySelector(".intro__nameinput").value;
 const flagImage = document.querySelector(".flag__image");
+const btnGO = document.querySelector(".intro__button");
+const introContainer = document.querySelector(".intro__container");
+const instructionsContainer = document.querySelector(
+  ".instructions__container"
+);
 
 // first page
 
 // input name and store in a variable
 // on click of button show next screen
+// hide container, display next container
+// store name in input field
+
+btnGO.addEventListener("click", () => {
+  let nameInput = document.querySelector(".intro__nameinput").value;
+  console.log(nameInput);
+  if (nameInput.length > 1) {
+    introContainer.style.display = "none";
+    instructionsContainer.style.display = "block";
+  } else if (nameInput.length < 1) {
+    introContainer.style.display = " ";
+    alert("Please add your name");
+  }
+});
 
 // second page
 
