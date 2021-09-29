@@ -9,6 +9,7 @@ const introContainer = document.querySelector(".intro__container");
 const instructionsContainer = document.querySelector(
   ".instructions__container"
 );
+const flagPage = document.querySelector(".flag__container");
 
 // first page
 
@@ -33,10 +34,31 @@ btnGO.addEventListener("click", () => {
 
 // display instructions and onClick show flags
 
+instructionsContainer.addEventListener("click", () => {
+  flagPage.style.display = "block";
+  instructionsContainer.style.display = "none";
+});
+
 // third page/flag page
+
+function solidFlags() {
+  flagImage.style.backgroundColor = "red";
+}
+
+setTimeout(solidFlags, 2000); //execute greet after 2000 milliseconds (2 seconds)
 
 // show flags for X seconds
 // flip flags to solid
+
+{
+  /* <button onclick="setTimeout(myFunction, 3000);">Try it</button>
+
+<script>
+function myFunction() {
+  alert('Hello');
+}
+</script> */
+}
 
 // when user clicks flag, display
 // when user clicks 2nd flag, display
