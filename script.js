@@ -18,8 +18,10 @@ const flagPage = document.querySelector(".flag__container");
 // hide container, display next container
 // store name in input field
 
+let nameInput;
+
 btnGO.addEventListener("click", () => {
-  let nameInput = document.querySelector(".intro__nameinput").value;
+  nameInput = document.querySelector(".intro__nameinput").value;
   console.log(nameInput);
   if (nameInput.length > 1) {
     introContainer.style.display = "none";
@@ -30,6 +32,18 @@ btnGO.addEventListener("click", () => {
   }
 });
 
+// btnGO.addEventListener("keyup", () => {
+//   let nameInput = document.querySelector(".intro__nameinput").value;
+//   console.log(nameInput);
+//   if (event.keyCode === 13 + nameInput.length > 1) {
+//     introContainer.style.display = "none";
+//     instructionsContainer.style.display = "block";
+//   } else if (event.keyCode === 13 + nameinput.length < 1) {
+//     introContainer.style.display = " ";
+//     alert("Please add your name");
+//   }
+// });
+
 // second page
 
 // display instructions and onClick show flags
@@ -37,28 +51,15 @@ btnGO.addEventListener("click", () => {
 instructionsContainer.addEventListener("click", () => {
   flagPage.style.display = "block";
   instructionsContainer.style.display = "none";
+  // setTimeout(function () {
+  //   flagSolid.style.backgroundColor = "red";
+  // }, 10000);
 });
 
 // third page/flag page
 
-function solidFlags() {
-  flagImage.style.backgroundColor = "red";
-}
-
-setTimeout(solidFlags, 2000); //execute greet after 2000 milliseconds (2 seconds)
-
 // show flags for X seconds
 // flip flags to solid
-
-{
-  /* <button onclick="setTimeout(myFunction, 3000);">Try it</button>
-
-<script>
-function myFunction() {
-  alert('Hello');
-}
-</script> */
-}
 
 // when user clicks flag, display
 // when user clicks 2nd flag, display
@@ -73,3 +74,41 @@ function myFunction() {
 
 // if player finds all flags before timer ends, display WIN message
 // if player fails to find all flags before timer ends, display GAME OVER message and try again button
+
+// countries object
+
+// let countriesFacts = {
+//   countryName: "Mauritius",
+//   fact: "Mauritius was the only known habitat of the dodo",
+//   imgSrc:
+//     "C:UsersSasha O'Donovandocuments\nologyprojectsmemory_game\nology_javascript_game\flag_images",
+// };
+
+// class CountryFact {
+//   constructor(country, fact, imgSRC) {
+//     this.country = country;
+//     this.fact = fact;
+//     this.imgSRC = imgSRC;
+//   }
+
+//   get CountryFactMessage() {
+//     const profileHTML = `
+//     <section class="winning-card">
+//     <img src=${this.imgSRC} />
+//     // <h2>"Well done ${this.getNameInput()} you've found the matching flag"</h2> create name function
+//     <h3>Did you know?</h3>
+//     <blockquote>${this.fact}</blockquote>
+//     </section>`;
+//   }
+// }
+
+// const mauritius = new CountryFact(
+//   "Mauritius",
+//   "Mauritius was the only known habitat of the Dodo",
+//   "C:UsersSasha O'Donovandocuments\nologyprojectsmemory_game\nology_javascript_game\flag_images"
+// );
+
+// flagPage.innerHTML += sasha.CountryFact();
+
+// // <h2>"Well done ${this.getNameInput()} you've found the matching flag"</h2> create name function
+// <h3>Did you know?</h3>

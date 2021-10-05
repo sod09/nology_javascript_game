@@ -143,75 +143,108 @@ body {
   grid-gap: 1vw;
   grid-template-areas: "ireland italy colombia netherlands united-kingdom norway" "croatia puerto-rico ireland2 mauritius puerto-rico2 paraguay" "netherlands2 norway2 united-kingdom2 italy2 mauritius2 hungary" "paraguay2 hungary2 mexico colombia2 croatia2 mexico2";
 }
+.flag__container .flag__grid .flag,
+.flag__container .flag__grid .flagPair {
+  height: 150px;
+  width: 250px;
+  background-size: 100%;
+  border-radius: 10px;
+  border: solid #071a52 10px;
+  cursor: pointer;
+}
 .flag__container .flag__grid #ireland {
   grid-area: ireland;
+  background-image: url(./flag_images/179-ireland.png);
 }
 .flag__container .flag__grid #ireland2 {
   grid-area: ireland2;
+  background-image: url(./flag_images/179-ireland.png);
 }
 .flag__container .flag__grid #italy {
   grid-area: italy;
+  background-image: url(./flag_images/013-italy.png);
 }
 .flag__container .flag__grid #italy2 {
   grid-area: italy2;
+  background-image: url(./flag_images/013-italy.png);
 }
 .flag__container .flag__grid #colombia {
   grid-area: colombia;
+  background-image: url(./flag_images/177-colombia.png);
 }
 .flag__container .flag__grid #colombia2 {
   grid-area: colombia2;
+  background-image: url(./flag_images/013-italy.png);
 }
 .flag__container .flag__grid #netherlands {
   grid-area: netherlands;
+  background-image: url(./flag_images/237-netherlands.png);
 }
 .flag__container .flag__grid #netherlands2 {
   grid-area: netherlands2;
+  background-image: url(./flag_images/237-netherlands.png);
 }
 .flag__container .flag__grid #norway {
   grid-area: norway;
+  background-image: url(./flag_images/143-norway.png);
 }
 .flag__container .flag__grid #norway2 {
   grid-area: norway2;
+  background-image: url(./flag_images/143-norway.png);
 }
 .flag__container .flag__grid #united-kingdom {
   grid-area: united-kingdom;
+  background-image: url(./flag_images/260-united-kingdom.png);
 }
 .flag__container .flag__grid #united-kingdom2 {
   grid-area: united-kingdom2;
+  background-image: url(./flag_images/260-united-kingdom.png);
 }
 .flag__container .flag__grid #croatia {
   grid-area: croatia;
+  background-image: url(./flag_images/164-croatia.png);
 }
 .flag__container .flag__grid #croatia2 {
   grid-area: croatia2;
+  background-image: url(./flag_images/164-croatia.png);
 }
 .flag__container .flag__grid #mexico {
   grid-area: mexico;
+  background-image: url(./flag_images/252-mexico.png);
 }
 .flag__container .flag__grid #mexico2 {
   grid-area: mexico2;
+  background-image: url(./flag_images/252-mexico.png);
 }
 .flag__container .flag__grid #mauritus {
   grid-area: mauritius;
+  background-image: url(./flag_images/001-mauritius.png);
 }
 .flag__container .flag__grid #mauritus2 {
   grid-area: mauritius2;
+  background-image: url(./flag_images/001-mauritius.png);
 }
 .flag__container .flag__grid #puerto-rico {
   grid-area: puerto-rico;
+  background-image: url(./flag_images/028-puerto-rico.png);
 }
 .flag__container .flag__grid #puerto-rico2 {
   grid-area: puerto-rico2;
+  background-image: url(./flag_images/028-puerto-rico.png);
 }
 .flag__container .flag__grid #paraguay {
   grid-area: paraguay;
+  background-image: url(./flag_images/041-paraguay.png);
 }
 .flag__container .flag__grid #paraguay2 {
   grid-area: paraguay2;
+  background-image: url(./flag_images/041-paraguay.png);
 }
 .flag__container .flag__grid #hungary {
   grid-area: hungary;
+  background-image: url(./flag_images/115-hungary.png);
 }
 .flag__container .flag__grid #hungary2 {
   grid-area: hungary2;
+  background-image: url(./flag_images/115-hungary.png);
 }
