@@ -129,18 +129,13 @@ body {
       font-size: 25px;
     }
 
-    .flag__score {
-      background-color: $color-tertiary-red;
-      color: $color-white;
-      border-radius: 50%;
-      font-size: 25px;
-    }
-
+    .flag__score,
     .flag__timer {
       background-color: $color-tertiary-red;
       color: $color-white;
       border-radius: 50%;
-      font-size: 25px;
+      font-size: 100px;
+      padding: 10px 10px;
     }
   }
 
@@ -156,7 +151,7 @@ body {
       "paraguay2 hungary2 mexico colombia2 croatia2 mexico2";
 
     .flag,
-    .flagPair {
+    .flag__pair {
       height: 150px;
       width: 250px;
       background-size: 100%;
@@ -245,12 +240,12 @@ body {
       background-image: url(./flag_images/252-mexico.png);
     }
 
-    #mauritus {
+    #mauritius {
       grid-area: mauritius;
       background-image: url(./flag_images/001-mauritius.png);
     }
 
-    #mauritus2 {
+    #mauritius2 {
       grid-area: mauritius2;
       background-image: url(./flag_images/001-mauritius.png);
     }

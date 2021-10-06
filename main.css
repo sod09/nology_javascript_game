@@ -124,17 +124,13 @@ body {
   text-align: center;
   font-size: 25px;
 }
-.flag__container .score__container .flag__score {
-  background-color: #f62a00;
-  color: #ffffff;
-  border-radius: 50%;
-  font-size: 25px;
-}
+.flag__container .score__container .flag__score,
 .flag__container .score__container .flag__timer {
   background-color: #f62a00;
   color: #ffffff;
   border-radius: 50%;
-  font-size: 25px;
+  font-size: 100px;
+  padding: 10px 10px;
 }
 .flag__container .flag__grid {
   display: grid;
@@ -144,7 +140,7 @@ body {
   grid-template-areas: "ireland italy colombia netherlands united-kingdom norway" "croatia puerto-rico ireland2 mauritius puerto-rico2 paraguay" "netherlands2 norway2 united-kingdom2 italy2 mauritius2 hungary" "paraguay2 hungary2 mexico colombia2 croatia2 mexico2";
 }
 .flag__container .flag__grid .flag,
-.flag__container .flag__grid .flagPair {
+.flag__container .flag__grid .flag__pair {
   height: 150px;
   width: 250px;
   background-size: 100%;
@@ -216,11 +212,11 @@ body {
   grid-area: mexico2;
   background-image: url(./flag_images/252-mexico.png);
 }
-.flag__container .flag__grid #mauritus {
+.flag__container .flag__grid #mauritius {
   grid-area: mauritius;
   background-image: url(./flag_images/001-mauritius.png);
 }
-.flag__container .flag__grid #mauritus2 {
+.flag__container .flag__grid #mauritius2 {
   grid-area: mauritius2;
   background-image: url(./flag_images/001-mauritius.png);
 }
