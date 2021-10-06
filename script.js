@@ -135,6 +135,205 @@ secondFlagBtn.forEach(function (i) {
 
 // if flags do not match, revert back to solids & do not add to score - animate flags so they shake
 
+const countryFlags = [
+  {
+    country = "Mauritius",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\001-mauritius.png",
+    fact =  "Mauritius was the only known habitat of the Dodo",
+    id =  1, 
+    className = "mauritius",
+  },
+
+  {
+    country = "Mauritius",
+    imgSrc =  "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\001-mauritius.png",
+    fact = "Mauritius was the only known habitat of the Dodo",
+    id = 1, 
+    className = "mauritius2",
+  },
+
+  {
+    country = "Ireland", 
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\179-ireland.png",
+    fact = "St Patrick wasn't Irish! Contrary to popular belief, and despite being the Patron Saint of Ireland, St. Patrick was not actually from Ireland. Born in Wales around 386 AD.",
+    id = 2,
+    className: "ireland",
+  },
+
+  {
+    country = "Ireland", 
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\179-ireland.png",
+    fact = "St Patrick wasn't Irish! Contrary to popular belief, and despite being the Patron Saint of Ireland, St. Patrick was not actually from Ireland. Born in Wales around 386 AD.",
+    id = 2,
+    className= "ireland2",
+
+  }, 
+
+  {
+    country ="Italy",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\013-italy.png",
+    fact = "The average Italian consumes 25kg of pasta per year. To put that into perspective, that’s even heavier than your carry-on luggage for an economy airline flight.",
+    id = 3,
+    className = "italy"
+  },
+
+  {
+    country ="Italy",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\013-italy.png",
+    fact = "The average Italian consumes 25kg of pasta per year. To put that into perspective, that’s even heavier than your carry-on luggage for an economy airline flight.",
+    id = 3,
+    className = "italy2"
+  },
+
+  {
+    country ="Puerto-Rico",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\028-puerto-rico.png",
+    fact = "Puerto-Rico is in fact not a country. It is a commonwealth governed by the United States and is therefore not a sovereign state. It's residents are considered US Citizens but they cannot vote in the US elections.",
+    id = 4,
+    className = "puerto-rico"
+
+  },
+
+  {
+    country ="Puerto-Rico",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\028-puerto-rico.png",
+    fact = "Puerto-Rico is in fact not a country. It is a commonwealth governed by the United States and is therefore not a sovereign state. It's residents are considered US Citizens but they cannot vote in the US elections.",
+    id = 4,
+    className = "puerto-rico2"
+  }, 
+
+  {
+    country = "Paraguay",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\041-paraguay.png",
+    fact = "The longest hot dog measured 203.80 m was made in Paraguay.",
+    id = 5,
+    className = "paraguay"
+  },
+
+  {
+    country = "Paraguay",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\041-paraguay.png",
+    fact = "The longest hot dog measured 203.80 m was made in Paraguay.",
+    id = 5,
+    className = "paraguay2"
+  },
+
+  {
+    country = "Hungary",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\115-hungary.png",
+    fact = "There is a Hungarian equivalent of the boogeyman known as “Rézfaszú bagoly”, a giant owl with a copper penis",
+    id = 6,
+    className = "hungary"
+  },
+
+  {
+    country = "Hungary",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\115-hungary.png",
+    fact = "There is a Hungarian equivalent of the boogeyman known as “Rézfaszú bagoly”, a giant owl with a copper penis",
+    id = 6,
+    className = "hungary2"
+  },
+
+  {
+    country ="Norway",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\143-norway.png",
+    fact = "Norway supplies London with a Christmas tree every year. To say thank you for their help during World War II, the city of Oslo sends Britain a tree every Christmas. The tall Norwegian spruce from the Oslo forest is placed prominently in Trafalgar Square."
+    id = 7,
+    className = "norway"
+  },
+
+  {
+    country ="Norway",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\143-norway.png",
+    fact = "Norway supplies London with a Christmas tree every year. To say thank you for their help during World War II, the city of Oslo sends Britain a tree every Christmas. The tall Norwegian spruce is placed in Trafalgar Square."
+    id = 7,
+    className = "norway2"
+  },
+
+  {  
+    country = "Croatia",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\164-croatia.png",
+    fact = "The Dalmatian dog is from Croatia originating from Dalmatia in Croatia. There are illustractions depicting the dalmatian in the 17th Century.",
+    id = 8,
+    className = "croatia"
+    },
+
+  {  
+    country = "Croatia",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\164-croatia.png",
+    fact = "The Dalmatian dog is from Croatia originating from Dalmatia in Croatia. There are illustractions depicting the dalmatian in the 17th Century.",
+    id = 8,
+    className = "croatia2"
+    },
+
+  {
+    country = "Colombia",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\177-colombia.png",
+    fact = "It is mandatory for radio and public television in Colombia to play the national anthem every day at 6am and 6pm.",
+    id = 9,
+    className = "colombia"
+  },
+
+  {
+    country = "Colombia",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\177-colombia.png",
+    fact = "It is mandatory for radio and public television in Colombia to play the national anthem every day at 6am and 6pm.",
+    id = 9,
+    className = "colombia2"
+  },
+
+  {
+    country = "Netherlands",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\237-netherlands.png",
+    fact = "There are more bicycles in the Netherlands than people. There are over 22 million bicycles in the country and only 17 million residents. ",
+    id = 10,
+    className = "netherlands"
+  },
+
+  {
+    country = "Netherlands",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\237-netherlands.png",
+    fact = "There are more bicycles in the Netherlands than people. There are over 22 million bicycles in the country and only 17 million residents. ",
+    id = 10,
+    className = "netherlands2"
+  },
+
+  {
+    country = "Mexico",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\252-mexico.png",
+    fact = "You Can’t Shave and Drive in Mexico. In 2008 the Mexican city of Torreon imposed fines for putting on make-up or shaving with an electric razor while driving.",
+    id = 11,
+    className = "mexico"
+
+  },
+
+  {
+    country = "Mexico",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\252-mexico.png",
+    fact = "You Can’t Shave and Drive in Mexico. In 2008 the Mexican city of Torreon imposed fines for putting on make-up or shaving with an electric razor while driving.",
+    id = 11,
+    className = "mexico2"
+
+  },
+
+  {
+  country = "United Kingdom",
+    imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\260-united-kingdom.png",
+    fact = "Among Queen Elizabeth II’s more bizarre titles is ‘Seigneur of the Swans’. Officially, the reigning monarch owns any unmarked mute swan in open water in both England and Wales… so most of the swans in Britain.",
+    id = 12,
+    className = "united-kingdom"
+  },
+
+  {
+    country = "United Kingdom",
+      imgSrc = "C:\Users\Sasha O'Donovan\Documents\nology\projects\memory_game\nology_javascript_game\flag_images\260-united-kingdom.png",
+      fact = "Among Queen Elizabeth II’s more bizarre titles is ‘Seigneur of the Swans’. Officially, the reigning monarch owns any unmarked mute swan in open water in both England and Wales… so most of the swans in Britain.",
+      id = 12,
+      className = "united-kingdom2"
+  }
+
+]
+
 
 function findTheFlags() {
   if ("country" === "country2") {
@@ -156,6 +355,7 @@ function findTheFlags() {
     // score stays the same
   }
 }
+
 
 // Array.includes() ?
 
@@ -188,13 +388,6 @@ class CountryFact {
   }
 }
 
-const mauritius = new CountryFactMessage (
-  "Mauritius",
-  "Mauritius was the only known habitat of the Dodo",
-  url("C:UsersSasha O'Donovandocuments\nologyprojectsmemory_game\nology_javascript_game\flag_images");
-  id = 1;
-  className = match html classname
-);
 
 // // end of game
 
