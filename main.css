@@ -81,13 +81,13 @@ body {
 .instructions__container .instructions__content .instructions__header {
   text-align: center;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
   font-size: 60px;
   font-weight: bold;
 }
 .instructions__container .instructions__content .instructions__text {
   text-align: center;
-  font-size: 45px;
+  font-size: 35px;
   font-weight: bold;
   padding: 50px;
 }
@@ -243,4 +243,8 @@ body {
 .flag__container .flag__grid #hungary2 {
   grid-area: hungary2;
   background-image: url(./flag_images/115-hungary.png);
+}
+
+.display_plain_flag {
+  background-color: #a7ff83;
 }
