@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Ruda:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Ruda", sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 0.75px;
   max-width: 100%;
   max-height: 100%;
@@ -108,29 +108,31 @@ body {
   justify-content: space-evenly;
   padding: 10px 10px;
 }
-.flag__container .score__container .flag__instructions {
-  background-color: #ffffff;
-  border: solid #071a52 10px;
-  border-radius: 10px;
-  width: 25%;
-  text-align: center;
-  font-size: 25px;
-}
+.flag__container .score__container .flag__instructions,
 .flag__container .score__container .flag__flagtotal {
   background-color: #ffffff;
   border: solid #071a52 10px;
   border-radius: 10px;
   width: 25%;
   text-align: center;
+  padding-top: 20px;
   font-size: 25px;
+  font-weight: bold;
 }
 .flag__container .score__container .flag__score,
 .flag__container .score__container .flag__timer {
   background-color: #f62a00;
+  border: solid 10px #ffffff;
   color: #ffffff;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
+  text-align: center;
   font-size: 100px;
   padding: 10px 10px;
+}
+.flag__container .score__container .flag__score {
+  background-color: #071a52;
 }
 .flag__container .flag__grid {
   display: grid;
@@ -147,6 +149,12 @@ body {
   border-radius: 10px;
   border: solid #071a52 10px;
   cursor: pointer;
+}
+.flag__container .flag__grid .flag .flag__image,
+.flag__container .flag__grid .flag__pair .flag__image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 .flag__container .flag__grid #ireland {
   grid-area: ireland;
@@ -245,6 +253,60 @@ body {
   background-image: url(./flag_images/115-hungary.png);
 }
 
-.display_plain_flag {
-  background-color: #a7ff83;
+.gameover__container .gameover__content {
+  color: #ffffff;
+  background-color: #17b978;
+  border: solid #ffffff 10px;
+  border-radius: 10px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px auto;
+  cursor: pointer;
+}
+.gameover__container .gameover__header {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  font-size: 60px;
+  font-weight: bold;
+}
+.gameover__container .gameover__text {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  padding: 50px;
+}
+.gameover__container .gameover__button {
+  background-color: #f62a00;
+  text-align: center;
+  font-size: 56px;
+  font-weight: bold;
+  padding: 20px 80px;
+  margin: 20px;
+  border: solid #ffffff 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.flag__image__animation {
+  transform: scale(1);
+  animation: pulse-black 2s infinite;
+}
+
+@keyframes flag__image__animation {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 #071a52;
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px #071a52;
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 #071a52;
+  }
 }

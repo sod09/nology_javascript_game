@@ -111,31 +111,33 @@ body {
     justify-content: space-evenly;
     padding: 10px 10px;
 
-    .flag__instructions {
-      background-color: $color-white;
-      border: solid $color-base 10px;
-      border-radius: 10px;
-      width: 25%;
-      text-align: center;
-      font-size: 25px;
-    }
-
+    .flag__instructions,
     .flag__flagtotal {
       background-color: $color-white;
       border: solid $color-base 10px;
       border-radius: 10px;
       width: 25%;
       text-align: center;
+      padding-top: 20px;
       font-size: 25px;
+      font-weight: bold;
     }
 
     .flag__score,
     .flag__timer {
       background-color: $color-tertiary-red;
+      border: solid 10px $color-white;
       color: $color-white;
+      height: 150px;
+      width: 150px;
       border-radius: 50%;
+      text-align: center;
       font-size: 100px;
       padding: 10px 10px;
+    }
+
+    .flag__score {
+      background-color: $color-base;
     }
   }
 
@@ -158,6 +160,12 @@ body {
       border-radius: 10px;
       border: solid $color-base 10px;
       cursor: pointer;
+
+      .flag__image {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
     }
 
     #ireland {
@@ -279,5 +287,50 @@ body {
       grid-area: hungary2;
       background-image: url(./flag_images/115-hungary.png);
     }
+  }
+}
+
+.gameover__container {
+  // display: none;
+
+  .gameover__content {
+    color: $color-white;
+    background-color: $color-secondary-green;
+    border: solid $color-white 10px;
+    border-radius: 10px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px auto;
+    cursor: pointer;
+  }
+
+  .gameover__header {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  .gameover__text {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 50px;
+  }
+
+  .gameover__button {
+    background-color: $color-tertiary-red;
+    text-align: center;
+    font-size: 56px;
+    font-weight: bold;
+    padding: 20px 80px;
+    margin: 20px;
+    border: solid $color-white 10px;
+    border-radius: 10px;
+    cursor: pointer;
   }
 }

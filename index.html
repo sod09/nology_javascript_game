@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <section class="intro__container">
+  <section class="intro__container" id="start">
     <h1 class="intro__header">THE MEMORY GAME</h1>
     <div class="intro__subheading">Can you beat the clock and find the flags?</div>
     <div class="intro__inputcontainer">
@@ -33,17 +33,15 @@
   <section class = "flag__container">
 
     <div class="score__container">
-      <div class="flag__instructions">Beat the clock, find the pairs!</div>
       <div class="flag__timer">10</div>
+      <div class="flag__instructions">Beat the clock, find the pairs!</div>
+      <div class="flag__flagtotal">Try and get 12 points before the timer ends.</div>
       <div class="flag__score">0</div>
-      <div class="flag__flagtotal">There are 12 pairs in total.</div>
     </div>
 
     <div class="flag__grid">  
 
-      <div><button></button></div>
 
-      
 <!-- 
       <button  class="flag__image flag" id="ireland"></button>
       <button  class="flag__image flag" id="italy"></button>
@@ -102,10 +100,24 @@
       <img src="./flag_images/164-croatia.png" alt="" class="flag_image flag2" id="croatia2">
       <img src="./flag_images/252-mexico.png" alt="" class="flag_image flag2" id="mexico2"> -->
     </div>
+
+
     
     
     
   </section>
+
+  <section class="gameover__container">
+    <div class="gameover__content">
+      <h2 class="gameover__header">GAME OVER</h2>
+      <p class="gameover__text">Bad luck, you didn't find all the pairs in time.</p>
+      <p class="gameover__text">Go back and try again!</p>
+      <button class="gameover__button"><a href="#start">Restart</a></button>
+   
+      </p> 
+    </div>
+  </section>
+  
 
   <script src="./script.js"></script>
   

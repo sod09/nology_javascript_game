@@ -94,24 +94,6 @@ btnGO.addEventListener("click", () => {
 //     start();
 //   }, 1000);
 
-// setTimeout(() => {
-//   console.log("hello- time out works!");
-//   hideFlags();
-//   let time = 3;
-//   function gameTimer() {
-//     time = time - 1;
-//     if (time < 3) {
-//       flagTimer.innerHTML = time;
-//     }
-
-//     if (time < 1) {
-//       clearInterval(gameTimer);
-//     }
-//   }
-//   setInterval(gameTimer, 1000);
-// }, 3000);
-// }
-
 // THIRD PAGE (FLAG PAGE)
 
 // activation of flags as buttons - looping through
@@ -125,29 +107,74 @@ btnGO.addEventListener("click", () => {
 
 const countryFlags = [
   {
-    country: "Mauritius",
-    imgSrc: "./flag_images/001-mauritius.png",
-    fact: "Mauritius was the only known habitat of the Dodo",
-    id: 1,
-    idName: "mauritius",
-    className: "flag",
-  },
-
-  {
-    country: "Mauritius",
-    imgSrc: "./flag_images/001-mauritius.png",
-    fact: "Mauritius was the only known habitat of the Dodo",
-    id: 1,
-    idName: "mauritius2",
-    className: "flag__pair",
-  },
-
-  {
     country: "Ireland",
     imgSrc: "./flag_images/179-ireland.png",
     fact: "St Patrick wasn't Irish! Contrary to popular belief, and despite being the Patron Saint of Ireland, St. Patrick was not actually from Ireland. Born in Wales around 386 AD.",
     id: 2,
     idName: "ireland",
+    className: "flag",
+  },
+
+  {
+    country: "Italy",
+    imgSrc: "./flag_images/013-italy.png",
+    fact: "The average Italian consumes 25kg of pasta per year. To put that into perspective, that’s even heavier than your carry-on luggage for an economy airline flight.",
+    id: 3,
+    idName: "italy",
+    className: "flag",
+  },
+
+  {
+    country: "Colombia",
+    imgSrc: "./flag_images/177-colombia.png",
+    fact: "It is mandatory for radio and public television in Colombia to play the national anthem every day at 6am and 6pm.",
+    id: 9,
+    idName: "colombia",
+    className: "flag",
+  },
+
+  {
+    country: "Netherlands",
+    imgSrc: "./flag_images/237-netherlands.png",
+    fact: "There are more bicycles in the Netherlands than people. There are over 22 million bicycles in the country and only 17 million residents. ",
+    id: 10,
+    idName: "netherlands",
+    className: "flag",
+  },
+
+  {
+    country: "United Kingdom",
+    imgSrc: "./flag_images/260-united-kingdom.png",
+    fact: "Among Queen Elizabeth II’s more bizarre titles is ‘Seigneur of the Swans’. Officially, the reigning monarch owns any unmarked mute swan in open water in both England and Wales… so most of the swans in Britain.",
+    id: 12,
+    idName: "united-kingdom",
+    className: "flag",
+  },
+
+  {
+    country: "Norway",
+    imgSrc: "./flag_images/143-norway.png",
+    fact: "Norway supplies London with a Christmas tree every year. To say thank you for their help during World War II, the city of Oslo sends Britain a tree every Christmas. The tall Norwegian spruce from the Oslo forest is placed prominently in Trafalgar Square.",
+    id: 7,
+    idName: "norway",
+    className: "flag",
+  },
+
+  {
+    country: "Croatia",
+    imgSrc: "./flag_images/164-croatia.png",
+    fact: "The Dalmatian dog is from Croatia originating from Dalmatia in Croatia. There are illustractions depicting the dalmatian in the 17th Century.",
+    id: 8,
+    idName: "croatia",
+    className: "flag",
+  },
+
+  {
+    country: "Puerto-Rico",
+    imgSrc: "./flag_images/028-puerto-rico.png",
+    fact: "Puerto-Rico is in fact not a country. It is a commonwealth governed by the United States and is therefore not a sovereign state. It's residents are considered US Citizens but they cannot vote in the US elections.",
+    id: 4,
+    idName: "puerto-rico",
     className: "flag",
   },
 
@@ -161,29 +188,11 @@ const countryFlags = [
   },
 
   {
-    country: "Italy",
-    imgSrc: "./flag_images/013-italy.png",
-    fact: "The average Italian consumes 25kg of pasta per year. To put that into perspective, that’s even heavier than your carry-on luggage for an economy airline flight.",
-    id: 3,
-    idName: "italy",
-    className: "flag",
-  },
-
-  {
-    country: "Italy",
-    imgSrc: "./flag_images/013-italy.png",
-    fact: "The average Italian consumes 25kg of pasta per year. To put that into perspective, that’s even heavier than your carry-on luggage for an economy airline flight.",
-    id: 3,
-    idName: "italy2",
-    className: "flag__pair",
-  },
-
-  {
-    country: "Puerto-Rico",
-    imgSrc: "./flag_images/028-puerto-rico.png",
-    fact: "Puerto-Rico is in fact not a country. It is a commonwealth governed by the United States and is therefore not a sovereign state. It's residents are considered US Citizens but they cannot vote in the US elections.",
-    id: 4,
-    idName: "puerto-rico",
+    country: "Mauritius",
+    imgSrc: "./flag_images/001-mauritius.png",
+    fact: "Mauritius was the only known habitat of the Dodo",
+    id: 1,
+    idName: "mauritius",
     className: "flag",
   },
 
@@ -206,11 +215,47 @@ const countryFlags = [
   },
 
   {
-    country: "Paraguay",
-    imgSrc: "./flag_images/041-paraguay.png",
-    fact: "The longest hot dog measured 203.80 m was made in Paraguay.",
-    id: 5,
-    idName: "paraguay2",
+    country: "Netherlands",
+    imgSrc: "./flag_images/237-netherlands.png",
+    fact: "There are more bicycles in the Netherlands than people. There are over 22 million bicycles in the country and only 17 million residents. ",
+    id: 10,
+    idName: "netherlands2",
+    className: "flag__pair",
+  },
+
+  {
+    country: "Norway",
+    imgSrc: "./flag_images/143-norway.png",
+    fact: "Norway supplies London with a Christmas tree every year. To say thank you for their help during World War II, the city of Oslo sends Britain a tree every Christmas. The tall Norwegian spruce is placed in Trafalgar Square.",
+    id: 7,
+    idName: "norway2",
+    className: "flag__pair",
+  },
+
+  {
+    country: "United Kingdom",
+    imgSrc: "./flag_images/260-united-kingdom.png",
+    fact: "Among Queen Elizabeth II’s more bizarre titles is ‘Seigneur of the Swans’. Officially, the reigning monarch owns any unmarked mute swan in open water in both England and Wales… so most of the swans in Britain.",
+    id: 12,
+    idName: "united-kingdom2",
+    className: "flag__pair",
+  },
+
+  {
+    country: "Italy",
+    imgSrc: "./flag_images/013-italy.png",
+    fact: "The average Italian consumes 25kg of pasta per year. To put that into perspective, that’s even heavier than your carry-on luggage for an economy airline flight.",
+    id: 3,
+    idName: "italy2",
+    className: "flag__pair",
+  },
+
+  {
+    country: "Mauritius",
+    imgSrc: "./flag_images/001-mauritius.png",
+    fact: "Mauritius was the only known habitat of the Dodo",
+    id: 1,
+    idName: "mauritius2",
     className: "flag__pair",
   },
 
@@ -224,83 +269,20 @@ const countryFlags = [
   },
 
   {
+    country: "Paraguay",
+    imgSrc: "./flag_images/041-paraguay.png",
+    fact: "The longest hot dog measured 203.80 m was made in Paraguay.",
+    id: 5,
+    idName: "paraguay2",
+    className: "flag__pair",
+  },
+
+  {
     country: "Hungary",
     imgSrc: "./flag_images/115-hungary.png",
     fact: "There is a Hungarian equivalent of the boogeyman known as “Rézfaszú bagoly”, a giant owl with a copper penis",
     id: 6,
     idName: "hungary2",
-    className: "flag__pair",
-  },
-
-  {
-    country: "Norway",
-    imgSrc: "./flag_images/143-norway.png",
-    fact: "Norway supplies London with a Christmas tree every year. To say thank you for their help during World War II, the city of Oslo sends Britain a tree every Christmas. The tall Norwegian spruce from the Oslo forest is placed prominently in Trafalgar Square.",
-    id: 7,
-    idName: "norway",
-    className: "flag",
-  },
-
-  {
-    country: "Norway",
-    imgSrc: "./flag_images/143-norway.png",
-    fact: "Norway supplies London with a Christmas tree every year. To say thank you for their help during World War II, the city of Oslo sends Britain a tree every Christmas. The tall Norwegian spruce is placed in Trafalgar Square.",
-    id: 7,
-    idName: "norway2",
-    className: "flag__pair",
-  },
-
-  {
-    country: "Croatia",
-    imgSrc: "./flag_images/164-croatia.png",
-    fact: "The Dalmatian dog is from Croatia originating from Dalmatia in Croatia. There are illustractions depicting the dalmatian in the 17th Century.",
-    id: 8,
-    idName: "croatia",
-    className: "flag",
-  },
-
-  {
-    country: "Croatia",
-    imgSrc: "./flag_images/164-croatia.png",
-    fact: "The Dalmatian dog is from Croatia originating from Dalmatia in Croatia. There are illustractions depicting the dalmatian in the 17th Century.",
-    id: 8,
-    idName: "croatia2",
-    className: "flag__pair",
-  },
-
-  {
-    country: "Colombia",
-    imgSrc: "./flag_images/177-colombia.png",
-    fact: "It is mandatory for radio and public television in Colombia to play the national anthem every day at 6am and 6pm.",
-    id: 9,
-    idName: "colombia",
-    className: "flag",
-  },
-
-  {
-    country: "Colombia",
-    imgSrc: "./flag_images/177-colombia.png",
-    fact: "It is mandatory for radio and public television in Colombia to play the national anthem every day at 6am and 6pm.",
-    id: 9,
-    idName: "colombia2",
-    className: "flag__pair",
-  },
-
-  {
-    country: "Netherlands",
-    imgSrc: "./flag_images/237-netherlands.png",
-    fact: "There are more bicycles in the Netherlands than people. There are over 22 million bicycles in the country and only 17 million residents. ",
-    id: 10,
-    idName: "netherlands",
-    className: "flag",
-  },
-
-  {
-    country: "Netherlands",
-    imgSrc: "./flag_images/237-netherlands.png",
-    fact: "There are more bicycles in the Netherlands than people. There are over 22 million bicycles in the country and only 17 million residents. ",
-    id: 10,
-    idName: "netherlands2",
     className: "flag__pair",
   },
 
@@ -314,6 +296,24 @@ const countryFlags = [
   },
 
   {
+    country: "Colombia",
+    imgSrc: "./flag_images/177-colombia.png",
+    fact: "It is mandatory for radio and public television in Colombia to play the national anthem every day at 6am and 6pm.",
+    id: 9,
+    idName: "colombia2",
+    className: "flag__pair",
+  },
+
+  {
+    country: "Croatia",
+    imgSrc: "./flag_images/164-croatia.png",
+    fact: "The Dalmatian dog is from Croatia originating from Dalmatia in Croatia. There are illustractions depicting the dalmatian in the 17th Century.",
+    id: 8,
+    idName: "croatia2",
+    className: "flag__pair",
+  },
+
+  {
     country: "Mexico",
     imgSrc: "./flag_images/252-mexico.png",
     fact: "You Can’t Shave and Drive in Mexico. In 2008 the Mexican city of Torreon imposed fines for putting on make-up or shaving with an electric razor while driving.",
@@ -321,46 +321,9 @@ const countryFlags = [
     idName: "mexico2",
     className: "flag__pair",
   },
-
-  {
-    country: "United Kingdom",
-    imgSrc: "./flag_images/260-united-kingdom.png",
-    fact: "Among Queen Elizabeth II’s more bizarre titles is ‘Seigneur of the Swans’. Officially, the reigning monarch owns any unmarked mute swan in open water in both England and Wales… so most of the swans in Britain.",
-    id: 12,
-    idName: "united-kingdom",
-    className: "flag",
-  },
-
-  {
-    country: "United Kingdom",
-    imgSrc: "./flag_images/260-united-kingdom.png",
-    fact: "Among Queen Elizabeth II’s more bizarre titles is ‘Seigneur of the Swans’. Officially, the reigning monarch owns any unmarked mute swan in open water in both England and Wales… so most of the swans in Britain.",
-    id: 12,
-    idName: "united-kingdom2",
-    className: "flag__pair",
-  },
 ];
 
-countryFlags.forEach((country) => {
-  // const flagHTML = document.createElement("div");
-  // flagHTML.classList.add("flag");
-  // const flagButton = document.createElement("button");
-  // flagButton.classList.add("flag__image");
-  // flagButton.classList.add(`${country.className}`);
-  // flagButton.style.backgroundImage = `url(${country.imgSrc})`;
-
-  const flagHTML = document.createElement("button");
-  const flagImage = document.createElement("span");
-  flagHTML.appendChild(flagImage);
-  flagHTML.classList.add("flag__image");
-  flagHTML.classList.add(`${country.className}`);
-  flagHTML.style.backgroundImage = `url(${country.imgSrc})`;
-  console.log(flagHTML);
-  flagContainer.appendChild(flagHTML);
-  flagHTML.addEventListener("click", () => {
-    console.log("flag has been clicked");
-  });
-});
+countryFlags.sort(() => 0.5 - Math.random());
 
 instructionsContainer.addEventListener("click", flagScreen);
 
@@ -374,7 +337,8 @@ console.log(flags);
 
 function hideFlags() {
   flags.forEach((flag) => {
-    flag.style.visibility = "hidden";
+    console.log(flag);
+    flag.style.backgroundImage = "none";
     flag.style.backgroundColor = "#a7ff83";
   });
   console.log("hiding");
@@ -402,50 +366,66 @@ function flagScreen() {
   start();
   setTimeout(() => {
     hideFlags();
-
     function stop() {
       clearInterval(interval);
     }
     stop();
-    findTheFlags();
   }, 10000);
+  // findTheFlags();
 }
 
 // START GAME TIMER
 
-function findTheFlags() {
-  flags.forEach((flag) => {
-    flag.addEventListener("click", () => {
-      flag.style.visibility = "visible";
-      console.log("find the flag working");
-      console.log(flag);
-    });
-  });
+let userChoices = [];
 
-  //   if (id === id {
-  // /     // add to score display/
-  //     let score = score + 1;
-  //     flagScore.innerHTML = score;
-  //     // keep both flags on display
-  //     // hold timer
-  //   } else {
-  //     // hide flags - revert back to solid colour
-  //     // run timer again
-  //     // score stays the same
-  //   }
-}
+countryFlags.forEach((country) => {
+  const flagHTML = document.createElement("div");
+  const flagImage = document.createElement("img");
+  flagHTML.appendChild(flagImage);
+  flagImage.classList.add("flag__image");
+  flagHTML.classList.add(`${country.className}`);
+  flagImage.src = `${country.imgSrc}`;
+  console.log(flagHTML);
+  flagContainer.appendChild(flagHTML);
+  flagHTML.addEventListener("click", () => {
+    flagImage.style.display = "block";
+    userChoices.push(country);
+  });
+});
+
+// if(userChoices[0].id === userChoices[1].id) {
+// let score = score + 1;
+// //     flagScore.innerHTML = score;
+// keep both flags on display
+// if (score = 12) {
+//   countryFactMessage();
+// }
+// }
+// else {
+// flag.style.backgroundColor = "#a7ff83";
+// //     // hide flags - revert back to solid colour
+// //     // score stays the same
+// //   }
+// else if ( time = 30){
+//   gameOverMessage()
+// }
+// }
 
 // // end of game
 
 // // if player finds all flags before timer ends, display WIN message
 // // if player fails to find all flags before timer ends, display GAME OVER message and try again button
 
-//   get CountryFactMessage() {
-//     const countryHTML = `
-//     <section class="winning-card">
-//     <img src=${this.imgSRC} />
-//     // <h2>"Well done ${this.getNameInput()} you've found the matching flag"</h2> create name function
-//     <h3>Did you know?</h3>
-//     <blockquote>${this.fact}</blockquote>
-//     </section>`;
+// function CountryFactMessage() {
+//   //
+//   //     <section class="winning-card">
+//   //     <img src=${countryFlags.imgSRC} />
+//   //     // <h2>"Well done ${nameInput} you've found the matching flag"</h2>
+//   //     <h3>Did you know?</h3>
+//   //     <blockquote>${countryFlags.fact}</blockquote>
+//   //     </section>`;
+//   //   }
+
+//   function gameOverMessage {
+
 //   }
