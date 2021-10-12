@@ -253,6 +253,9 @@ body {
   background-image: url(./flag_images/115-hungary.png);
 }
 
+.gameover__container {
+  display: none;
+}
 .gameover__container .gameover__content {
   color: #ffffff;
   background-color: #17b978;

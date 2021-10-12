@@ -16,6 +16,7 @@ const flagPage = document.querySelector(".flag__container");
 const flagTimer = document.querySelector(".flag__timer");
 const flagScore = document.querySelector(".flag__score");
 const flagContainer = document.querySelector(".flag__grid");
+const gameoverContainer = document.querySelector(".gameover__container");
 
 // FIRST PAGE
 
@@ -325,11 +326,25 @@ const countryFlags = [
 
 countryFlags.sort(() => 0.5 - Math.random());
 
+let userChoices = [];
+
+countryFlags.forEach((country) => {
+  const flagHTML = document.createElement("div");
+  const flagImage = document.createElement("img");
+  flagHTML.appendChild(flagImage);
+  flagImage.classList.add("flag__image");
+  flagHTML.classList.add(`${country.className}`);
+  flagImage.src = `${country.imgSrc}`;
+  console.log(flagHTML);
+  flagContainer.appendChild(flagHTML);
+  flagHTML.addEventListener("click", () => {
+    flagImage.style.display = "block";
+    userChoices.push(country);
+    console.log(userChoices);
+  });
+});
+
 instructionsContainer.addEventListener("click", flagScreen);
-
-const flagHTML = document.querySelectorAll("button");
-
-console.log(flagHTML);
 
 const flags = document.querySelectorAll(".flag__image");
 
@@ -338,9 +353,12 @@ console.log(flags);
 function hideFlags() {
   flags.forEach((flag) => {
     console.log(flag);
-    flag.style.backgroundImage = "none";
-    flag.style.backgroundColor = "#a7ff83";
+    flag.style.display = "none";
   });
+  // flagHTML.forEach((flag) => {
+  //   flag.style.backgroundColor = "#a7ff83";
+  //   console.log(flag);
+  // });
   console.log("hiding");
 }
 
@@ -376,38 +394,26 @@ function flagScreen() {
 
 // START GAME TIMER
 
-let userChoices = [];
+// for (let i=0; i<1; i++) userChoices.push(0);
+// new Array(1).fill(0)
+// Array.from({length: 1}, () => ({}))
+// → [{}, {}, {}] (unique objects)
 
-countryFlags.forEach((country) => {
-  const flagHTML = document.createElement("div");
-  const flagImage = document.createElement("img");
-  flagHTML.appendChild(flagImage);
-  flagImage.classList.add("flag__image");
-  flagHTML.classList.add(`${country.className}`);
-  flagImage.src = `${country.imgSrc}`;
-  console.log(flagHTML);
-  flagContainer.appendChild(flagHTML);
-  flagHTML.addEventListener("click", () => {
-    flagImage.style.display = "block";
-    userChoices.push(country);
-  });
-});
-
-// if(userChoices[0].id === userChoices[1].id) {
-// let score = score + 1;
-// //     flagScore.innerHTML = score;
-// keep both flags on display
-// if (score = 12) {
-//   countryFactMessage();
+// if (userChoices[0].id === userChoices[1].id) {
+//   let score = score + 1;
+//   //     flagScore.innerHTML = score;
+//   keep both flags on display
+//   if (score = 12) {
+//     winningMessage();
+//   }
 // }
-// }
-// else {
+// else if {
 // flag.style.backgroundColor = "#a7ff83";
 // //     // hide flags - revert back to solid colour
 // //     // score stays the same
 // //   }
 // else if ( time = 30){
-//   gameOverMessage()
+//   gameover.style.diplay = "block";
 // }
 // }
 
@@ -416,7 +422,7 @@ countryFlags.forEach((country) => {
 // // if player finds all flags before timer ends, display WIN message
 // // if player fails to find all flags before timer ends, display GAME OVER message and try again button
 
-// function CountryFactMessage() {
+// function winningMessage() {
 //   //
 //   //     <section class="winning-card">
 //   //     <img src=${countryFlags.imgSRC} />
@@ -425,7 +431,3 @@ countryFlags.forEach((country) => {
 //   //     <blockquote>${countryFlags.fact}</blockquote>
 //   //     </section>`;
 //   //   }
-
-//   function gameOverMessage {
-
-//   }
