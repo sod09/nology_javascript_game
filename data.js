@@ -182,7 +182,7 @@ export const countryFlags = [
   {
     country: "Mexico",
     imgSrc: "./flag_images/252-mexico.png",
-    fact: "You Can’t Shave and Drive in Mexico. In 2008 the Mexican city of Torreon imposed fines for putting on make-up or shaving with an electric razor while driving.",
+    fact: "You cannot shave and drive in Mexico. Unfortunately in 2008 the Mexican city of Torreon imposed fines for putting on make-up or shaving with an electric razor while driving.",
     id: 11,
     idName: "mexico",
     className: "flag",

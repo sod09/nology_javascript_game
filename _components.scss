@@ -104,6 +104,7 @@ body {
   // align-items: center;
   margin: 20px auto;
   border-radius: 10px;
+  position: relative;
 
   .score__container {
     display: flex;
@@ -332,5 +333,47 @@ body {
     border: solid $color-white 10px;
     border-radius: 10px;
     cursor: pointer;
+  }
+}
+
+// .empty__div {
+//   width: 100vw;
+//   height: 100vh;
+//   z-index: 5;
+//   opacity: 1;
+// }
+
+.match__message {
+  background-color: $color-primary-lime;
+  opacity: 88%;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: $color-base;
+  width: 100%;
+  text-align: center;
+
+  .match__country__header {
+    font-size: 60px;
+  }
+
+  .match__image {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .match__header {
+    font-size: 35px;
+  }
+
+  .match__subheader {
+    font-size: 35px;
+  }
+
+  .match__fact {
+    font-size: 35px;
+    padding-bottom: 50px;
   }
 }

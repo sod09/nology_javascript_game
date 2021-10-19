@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.75px;
   max-width: 100%;
@@ -26,17 +27,28 @@ body {
   font-size: 96px;
   font-weight: bold;
 }
+
 .intro__container .intro__subheading {
   color: #ffffff;
   font-size: 48px;
   font-weight: bold;
   text-align: center;
 }
+
 .intro__container .intro__inputcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #17b978;
   border: solid #ffffff 10px;
   border-radius: 10px;
@@ -44,12 +56,14 @@ body {
   width: 30%;
   margin: 100px auto;
 }
+
 .intro__container .intro__inputcontainer .intro__nameinput {
   font-size: 40px;
   text-align: center;
   border: solid #ffffff 10px;
   border-radius: 10px;
 }
+
 .intro__container .intro__inputcontainer .intro__button {
   background-color: #f62a00;
   text-align: center;
@@ -65,19 +79,30 @@ body {
 .instructions__container {
   display: none;
 }
+
 .instructions__container .instructions__content {
   color: #ffffff;
   background-color: #17b978;
   border: solid #ffffff 10px;
   border-radius: 10px;
   width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 100px auto;
   cursor: pointer;
 }
+
 .instructions__container .instructions__content .instructions__header {
   text-align: center;
   padding-top: 100px;
@@ -85,6 +110,7 @@ body {
   font-size: 60px;
   font-weight: bold;
 }
+
 .instructions__container .instructions__content .instructions__text {
   text-align: center;
   font-size: 35px;
@@ -97,17 +123,32 @@ body {
   background-color: #17b978;
   border: solid #ffffff 10px;
   width: 90%;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 20px auto;
   border-radius: 10px;
+  position: relative;
 }
+
 .flag__container .score__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 10px 10px;
 }
+
 .flag__container .score__container .flag__instructions,
 .flag__container .score__container .flag__flagtotal {
   background-color: #ffffff;
@@ -119,6 +160,7 @@ body {
   font-size: 25px;
   font-weight: bold;
 }
+
 .flag__container .score__container .flag__score,
 .flag__container .score__container .flag__timer {
   background-color: #f62a00;
@@ -131,16 +173,22 @@ body {
   font-size: 100px;
   padding: 10px 10px;
 }
+
 .flag__container .score__container .flag__score {
   background-color: #071a52;
 }
+
 .flag__container .flag__grid {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-gap: 1vw;
-  grid-template-areas: "ireland italy colombia netherlands united-kingdom norway" "croatia puerto-rico ireland2 mauritius puerto-rico2 paraguay" "netherlands2 norway2 united-kingdom2 italy2 mauritius2 hungary" "paraguay2 hungary2 mexico colombia2 croatia2 mexico2";
+      grid-template-areas: "ireland italy colombia netherlands united-kingdom norway" "croatia puerto-rico ireland2 mauritius puerto-rico2 paraguay" "netherlands2 norway2 united-kingdom2 italy2 mauritius2 hungary" "paraguay2 hungary2 mexico colombia2 croatia2 mexico2";
 }
+
 .flag__container .flag__grid .flag,
 .flag__container .flag__grid .flag__pair {
   height: 150px;
@@ -150,105 +198,179 @@ body {
   border: solid #071a52 10px;
   cursor: pointer;
 }
+
 .flag__container .flag__grid .flag .flag__image,
 .flag__container .flag__grid .flag__pair .flag__image {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
   width: 100%;
 }
+
 .flag__container .flag__grid #ireland {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: ireland;
   background-image: url(./flag_images/179-ireland.png);
 }
+
 .flag__container .flag__grid #ireland2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
   grid-area: ireland2;
   background-image: url(./flag_images/179-ireland.png);
 }
+
 .flag__container .flag__grid #italy {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: italy;
   background-image: url(./flag_images/013-italy.png);
 }
+
 .flag__container .flag__grid #italy2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
   grid-area: italy2;
   background-image: url(./flag_images/013-italy.png);
 }
+
 .flag__container .flag__grid #colombia {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: colombia;
   background-image: url(./flag_images/177-colombia.png);
 }
+
 .flag__container .flag__grid #colombia2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
   grid-area: colombia2;
   background-image: url(./flag_images/013-italy.png);
 }
+
 .flag__container .flag__grid #netherlands {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
   grid-area: netherlands;
   background-image: url(./flag_images/237-netherlands.png);
 }
+
 .flag__container .flag__grid #netherlands2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: netherlands2;
   background-image: url(./flag_images/237-netherlands.png);
 }
+
 .flag__container .flag__grid #norway {
+  -ms-grid-row: 1;
+  -ms-grid-column: 6;
   grid-area: norway;
   background-image: url(./flag_images/143-norway.png);
 }
+
 .flag__container .flag__grid #norway2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: norway2;
   background-image: url(./flag_images/143-norway.png);
 }
+
 .flag__container .flag__grid #united-kingdom {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
   grid-area: united-kingdom;
   background-image: url(./flag_images/260-united-kingdom.png);
 }
+
 .flag__container .flag__grid #united-kingdom2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
   grid-area: united-kingdom2;
   background-image: url(./flag_images/260-united-kingdom.png);
 }
+
 .flag__container .flag__grid #croatia {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: croatia;
   background-image: url(./flag_images/164-croatia.png);
 }
+
 .flag__container .flag__grid #croatia2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 5;
   grid-area: croatia2;
   background-image: url(./flag_images/164-croatia.png);
 }
+
 .flag__container .flag__grid #mexico {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
   grid-area: mexico;
   background-image: url(./flag_images/252-mexico.png);
 }
+
 .flag__container .flag__grid #mexico2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 6;
   grid-area: mexico2;
   background-image: url(./flag_images/252-mexico.png);
 }
+
 .flag__container .flag__grid #mauritius {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
   grid-area: mauritius;
   background-image: url(./flag_images/001-mauritius.png);
 }
+
 .flag__container .flag__grid #mauritius2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
   grid-area: mauritius2;
   background-image: url(./flag_images/001-mauritius.png);
 }
+
 .flag__container .flag__grid #puerto-rico {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: puerto-rico;
   background-image: url(./flag_images/028-puerto-rico.png);
 }
+
 .flag__container .flag__grid #puerto-rico2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
   grid-area: puerto-rico2;
   background-image: url(./flag_images/028-puerto-rico.png);
 }
+
 .flag__container .flag__grid #paraguay {
+  -ms-grid-row: 2;
+  -ms-grid-column: 6;
   grid-area: paraguay;
   background-image: url(./flag_images/041-paraguay.png);
 }
+
 .flag__container .flag__grid #paraguay2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: paraguay2;
   background-image: url(./flag_images/041-paraguay.png);
 }
+
 .flag__container .flag__grid #hungary {
+  -ms-grid-row: 3;
+  -ms-grid-column: 6;
   grid-area: hungary;
   background-image: url(./flag_images/115-hungary.png);
 }
+
 .flag__container .flag__grid #hungary2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
   grid-area: hungary2;
   background-image: url(./flag_images/115-hungary.png);
 }
@@ -256,19 +378,30 @@ body {
 .gameover__container {
   display: none;
 }
+
 .gameover__container .gameover__content {
   color: #ffffff;
   background-color: #17b978;
   border: solid #ffffff 10px;
   border-radius: 10px;
   width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 100px auto;
   cursor: pointer;
 }
+
 .gameover__container .gameover__header {
   text-align: center;
   padding-top: 100px;
@@ -276,12 +409,14 @@ body {
   font-size: 60px;
   font-weight: bold;
 }
+
 .gameover__container .gameover__text {
   text-align: center;
   font-size: 35px;
   font-weight: bold;
   padding: 50px;
 }
+
 .gameover__container .gameover__button {
   background-color: #f62a00;
   text-align: center;
@@ -294,22 +429,94 @@ body {
   cursor: pointer;
 }
 
+.match__message {
+  background-color: #a7ff83;
+  opacity: 88%;
+  position: absolute;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #071a52;
+  width: 100%;
+  text-align: center;
+}
+
+.match__message .match__country__header {
+  font-size: 60px;
+}
+
+.match__message .match__image {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.match__message .match__header {
+  font-size: 35px;
+}
+
+.match__message .match__subheader {
+  font-size: 35px;
+}
+
+.match__message .match__fact {
+  font-size: 35px;
+  padding-bottom: 50px;
+}
+
 .flag__image__animation {
-  transform: scale(1);
-  animation: pulse-black 2s infinite;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: pulse-black 2s infinite;
+          animation: pulse-black 2s infinite;
+}
+
+@-webkit-keyframes flag__image__animation {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 #071a52;
+            box-shadow: 0 0 0 0 #071a52;
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0 10px #071a52;
+            box-shadow: 0 0 0 10px #071a52;
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 #071a52;
+            box-shadow: 0 0 0 0 #071a52;
+  }
 }
 
 @keyframes flag__image__animation {
   0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 #071a52;
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 #071a52;
+            box-shadow: 0 0 0 0 #071a52;
   }
   70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px #071a52;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0 10px #071a52;
+            box-shadow: 0 0 0 10px #071a52;
   }
   100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 #071a52;
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 #071a52;
+            box-shadow: 0 0 0 0 #071a52;
   }
 }
+/*# sourceMappingURL=main.css.map */
