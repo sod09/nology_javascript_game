@@ -41,7 +41,9 @@ goButton.addEventListener("click", () => {
   startTimer(30);
   goButton.style.display = "none";
   gameStart = true;
-  endOfGameMessage();
+  setInterval(() => {
+    gameFinished();
+  }, 1000);
 });
 
 // SECOND PAGE
@@ -105,7 +107,7 @@ function startTimer(time) {
       stopTimer();
     }
   }, 1000);
-  console.log(flagTimer);
+  // console.log(flagTimer);
 }
 
 function stopTimer() {
@@ -114,11 +116,12 @@ function stopTimer() {
 
 const matchMessage = document.querySelector(".match__message");
 const winningMessage = document.querySelector(".winning__message");
-const gameOverMessage = document.querySelector(".gameover__message");
+const endOfGameMessage = document.querySelector(".gameover__message");
 
 matchMessage.addEventListener("click", () => {
   matchMessage.style.display = "none";
 });
+
 function itsAMatchMessage() {
   let nameInput = document.querySelector(".intro__nameinput").value;
   matchMessage.style.display = "flex";
@@ -135,32 +138,37 @@ function getWinningMessage() {
   let nameInput = document.querySelector(".intro__nameinput").value;
   winningMessage.style.display = "flex";
   winningMessage.innerHTML = `
-  <div style="width:100%;height:0;padding-bottom:65%;position:relative;"><iframe src="https://giphy.com/embed/3o7bu57lYhUEFiYDSM" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/alroker-al-roker-3o7bu57lYhUEFiYDSM">via GIPHY</a></p>
-  <h1>YOU'RE A WINNER!</h1>
-  <h2>Super well done ${nameInput}!!</h2>
-  <p>You found all the pairs!</p>
-  <p>It's official you've got the memory of an elephant.</p>`;
+  
+  <h1 class="winning __header">YOU'RE A WINNER!</h1>
+  <h2 class="winning__subheader">Super well done ${nameInput}!!</h2>
+  <p class="winning__text">You found all the pairs!</p>
+  <p class="winning__text">It's official you've got the memory of an elephant.</p>`;
 }
+
+/* <div style="width:100%;height:0;padding-bottom:65%;position:relative;"><iframe src="https://giphy.com/embed/3o7bu57lYhUEFiYDSM" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/alroker-al-roker-3o7bu57lYhUEFiYDSM">via GIPHY</a></p> */
 
 function getEndOfGameMessage() {
   let nameInput = document.querySelector(".intro__nameinput").value;
-  gameOverMessage.style.display = "flex";
-  gameOverMessage.innerHTML = `
-  <div style="width:100%;height:0;padding-bottom:65%;position:relative;"><iframe src="https://giphy.com/embed/3o7bu57lYhUEFiYDSM" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/alroker-al-roker-3o7bu57lYhUEFiYDSM">via GIPHY</a></p>
-  <h1>YOU'RE A WINNER!</h1>
-  <h2>Super well done ${nameInput}!!</h2>
-  <p>You found all the pairs!</p>
-  <p>It's official you've got the memory of an elephant.</p>`;
+  endOfGameMessage.style.display = "flex";
+  endOfGameMessage.innerHTML = `
+  <h1 class="gameover__header">Game Over!</h1>
+  <h2 class="gameover__subheader">Better luck next time ${nameInput}!!</h2>
+  <p class="gameover__text">You did not beat the timer!</p>
+  <button class="gameover__button"><a href=${introContainer}>Restart</a></button>`;
 }
 
-function endOfGameMessage() {
-  if (flagScore.innerHTML === 12 && flagTimer.innerHTML > 0) {
-    getWinningMessage();
+// <iframe src="https://giphy.com/embed/MwIvOD6KuAdMiE9P5Z" width="312" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/amandaceemedia-teasing-amanda-cee-media-MwIvOD6KuAdMiE9P5Z">via GIPHY</a></p>
+
+function gameFinished() {
+  if (flagScore.innerHTML == 12 && flagTimer.innerHTML > 0) {
     alert("You're a winner!");
-  } else if (flagTimer.innerHTML === 0) {
+    console.log("you're winning");
+    getWinningMessage();
+  } else if (flagTimer.innerHTML == 0) {
+    console.log("you're losing");
     getEndOfGameMessage();
-    alert("oh no try again!");
   }
+  console.log("end of game message working");
 }
 
 //  get 30 second timer in correct place so that it runs once
@@ -189,7 +197,7 @@ function checkMatch(image) {
   setTimeout(() => {
     stopTimer();
   }, 30000);
-  console.log(userChoices);
+  // console.log(userChoices);
 }
 
 let gameStart = false;
@@ -197,33 +205,33 @@ let gameStart = false;
 countryFlags.forEach((country) => {
   const flagHTML = document.createElement("div");
   const flagImage = document.createElement("img");
-  console.log(country);
+  // console.log(country);
   flagHTML.appendChild(flagImage);
   flagImage.classList.add("flag__image");
   flagHTML.classList.add(`${country.className}`);
   flagImage.src = `${country.imgSrc}`;
-  console.log(flagHTML);
+  // console.log(flagHTML);
   flagContainer.appendChild(flagHTML);
   flagHTML.addEventListener("click", () => {
     if (gameStart) {
       clickedImages.push(flagImage);
-      console.log(clickedImages);
+      // console.log(clickedImages);
       flagImage.style.display = "block";
       userChoices.push(country);
-      console.log(userChoices);
+      // console.log(userChoices);
       checkMatch(flagImage);
     }
   });
 });
 
 const flags = document.querySelectorAll(".flag__image");
-console.log(flags);
+// console.log(flags);
 
 instructionsContainer.addEventListener("click", flagScreen);
 
 function hideFlags() {
   flags.forEach((flag) => {
-    console.log(flag);
+    // console.log(flag);
     flag.style.display = "none";
   });
   console.log("hide the flags function is working");
