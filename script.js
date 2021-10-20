@@ -1,7 +1,6 @@
 import { countryFlags } from "./data.js";
 
 // UI variables
-
 const btnGO = document.querySelector(".intro__button");
 const introContainer = document.querySelector(".intro__container");
 const instructionsContainer = document.querySelector(

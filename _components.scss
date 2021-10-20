@@ -55,6 +55,25 @@ body {
       cursor: pointer;
     }
   }
+
+  .instructions__signature {
+    color: $color-white;
+    text-align: center;
+    padding-top: 200px;
+  }
+
+  .instructions__icon {
+    color: $color-white;
+    text-align: center;
+
+    .instructions__email {
+      color: $color-white; /* Unvisited link  */
+    }
+
+    .instructions__email:hover {
+      color: $color-secondary-green;
+    } /* Mouse over link */
+  }
 }
 
 // instructions page, again will hide when clicked
@@ -99,10 +118,8 @@ body {
   background-color: $color-secondary-green;
   border: solid $color-white 10px;
   width: 90%;
-  // display: flex;
   flex-direction: column;
   justify-content: center;
-  // align-items: center;
   margin: 20px auto;
   border-radius: 10px;
   position: relative;
@@ -115,6 +132,7 @@ body {
 
     .flag__instructions,
     .flag__flagtotal {
+      color: $color-base;
       background-color: $color-white;
       border: solid $color-base 10px;
       border-radius: 10px;
@@ -127,6 +145,7 @@ body {
 
     .flag__instructions__arrow {
       font-size: 100px;
+      color: $color-base;
     }
 
     .flag__score,
@@ -155,106 +174,3 @@ body {
     }
   }
 }
-
-// .match__message {
-//   background-color: $color-primary-lime;
-//   opacity: 90%;
-//   position: absolute;
-//   z-index: 2;
-//   display: flex;
-//   align-items: center;
-//   flex-direction: column;
-//   color: $color-base;
-//   width: 100%;
-//   text-align: center;
-
-//   .match__country__header {
-//     font-size: 60px;
-//   }
-
-//   .match__image {
-//     padding-top: 50px;
-//     padding-bottom: 50px;
-//   }
-
-//   .match__header {
-//     font-size: 35px;
-//   }
-
-//   .match__subheader {
-//     font-size: 35px;
-//   }
-
-//   .match__fact {
-//     font-size: 35px;
-//     padding-bottom: 50px;
-//   }
-// }
-
-// .gameover__message {
-//   opacity: 93%;
-//   background-color: $color-primary-lime;
-//   position: absolute;
-//   z-index: 2;
-//   display: flex;
-//   align-items: center;
-//   flex-direction: column;
-//   color: $color-base;
-//   width: 80%;
-//   text-align: center;
-//   margin: 100px auto;
-//   color: $color-white;
-
-//   .gameover__header {
-//     text-align: center;
-//     padding-top: 100px;
-//     padding-bottom: 20px;
-//     font-size: 60px;
-//     font-weight: bold;
-//   }
-
-//   .gameover__subheader {
-//     text-align: center;
-//     font-size: 50px;
-//     font-weight: bold;
-//     padding-bottom: 10px;
-//   }
-
-//   .gameover__button {
-//     background-color: $color-tertiary-red;
-//     color: $color-white;
-//     text-align: center;
-//     font-size: 35px;
-//     font-weight: bold;
-//     padding: 20px 80px;
-//     margin: 20px;
-//     border: solid $color-white 10px;
-//     border-radius: 10px;
-//     cursor: pointer;
-//   }
-// }
-
-// .winning__message {
-//   opacity: 88%;
-//   background-color: $color-primary-lime;
-//   position: absolute;
-//   z-index: 2;
-//   display: flex;
-//   align-items: center;
-//   flex-direction: column;
-//   color: $color-base;
-//   width: 80%;
-//   text-align: center;
-
-//   .winning__header {
-//     font-size: 60px;
-//   }
-
-//   .winning__subheader {
-//     font-size: 35px;
-//   }
-
-//   .winning__text {
-//     font-size: 35px;
-//   }
-// }

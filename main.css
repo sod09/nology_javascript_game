@@ -77,6 +77,27 @@ body {
   cursor: pointer;
 }
 
+.intro__container .instructions__signature {
+  color: #ffffff;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.intro__container .instructions__icon {
+  color: #ffffff;
+  text-align: center;
+  /* Mouse over link */
+}
+
+.intro__container .instructions__icon .instructions__email {
+  color: #ffffff;
+  /* Unvisited link  */
+}
+
+.intro__container .instructions__icon .instructions__email:hover {
+  color: #17b978;
+}
+
 .instructions__container {
   display: none;
 }
@@ -152,6 +173,7 @@ body {
 
 .flag__container .score__container .flag__instructions,
 .flag__container .score__container .flag__flagtotal {
+  color: #071a52;
   background-color: #ffffff;
   border: solid #071a52 10px;
   border-radius: 10px;
@@ -164,6 +186,7 @@ body {
 
 .flag__container .score__container .flag__instructions__arrow {
   font-size: 100px;
+  color: #071a52;
 }
 
 .flag__container .score__container .flag__score,
