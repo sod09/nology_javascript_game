@@ -66,6 +66,7 @@ body {
 
 .intro__container .intro__inputcontainer .intro__button {
   background-color: #f62a00;
+  color: #ffffff;
   text-align: center;
   font-size: 56px;
   font-weight: bold;
@@ -161,8 +162,13 @@ body {
   font-weight: bold;
 }
 
+.flag__container .score__container .flag__instructions__arrow {
+  font-size: 100px;
+}
+
 .flag__container .score__container .flag__score,
-.flag__container .score__container .flag__timer {
+.flag__container .score__container .flag__timer,
+.flag__container .score__container .flag__gobutton {
   background-color: #f62a00;
   border: solid 10px #ffffff;
   color: #ffffff;
@@ -178,315 +184,11 @@ body {
   background-color: #071a52;
 }
 
-.flag__container .flag__grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-gap: 1vw;
-      grid-template-areas: "ireland italy colombia netherlands united-kingdom norway" "croatia puerto-rico ireland2 mauritius puerto-rico2 paraguay" "netherlands2 norway2 united-kingdom2 italy2 mauritius2 hungary" "paraguay2 hungary2 mexico colombia2 croatia2 mexico2";
-}
-
-.flag__container .flag__grid .flag,
-.flag__container .flag__grid .flag__pair {
-  height: 150px;
-  width: 250px;
-  background-size: 100%;
-  border-radius: 10px;
-  border: solid #071a52 10px;
-  cursor: pointer;
-}
-
-.flag__container .flag__grid .flag .flag__image,
-.flag__container .flag__grid .flag__pair .flag__image {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
-.flag__container .flag__grid #ireland {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: ireland;
-  background-image: url(./flag_images/179-ireland.png);
-}
-
-.flag__container .flag__grid #ireland2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  grid-area: ireland2;
-  background-image: url(./flag_images/179-ireland.png);
-}
-
-.flag__container .flag__grid #italy {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: italy;
-  background-image: url(./flag_images/013-italy.png);
-}
-
-.flag__container .flag__grid #italy2 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 4;
-  grid-area: italy2;
-  background-image: url(./flag_images/013-italy.png);
-}
-
-.flag__container .flag__grid #colombia {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: colombia;
-  background-image: url(./flag_images/177-colombia.png);
-}
-
-.flag__container .flag__grid #colombia2 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 4;
-  grid-area: colombia2;
-  background-image: url(./flag_images/013-italy.png);
-}
-
-.flag__container .flag__grid #netherlands {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  grid-area: netherlands;
-  background-image: url(./flag_images/237-netherlands.png);
-}
-
-.flag__container .flag__grid #netherlands2 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: netherlands2;
-  background-image: url(./flag_images/237-netherlands.png);
-}
-
-.flag__container .flag__grid #norway {
-  -ms-grid-row: 1;
-  -ms-grid-column: 6;
-  grid-area: norway;
-  background-image: url(./flag_images/143-norway.png);
-}
-
-.flag__container .flag__grid #norway2 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: norway2;
-  background-image: url(./flag_images/143-norway.png);
-}
-
-.flag__container .flag__grid #united-kingdom {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
-  grid-area: united-kingdom;
-  background-image: url(./flag_images/260-united-kingdom.png);
-}
-
-.flag__container .flag__grid #united-kingdom2 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  grid-area: united-kingdom2;
-  background-image: url(./flag_images/260-united-kingdom.png);
-}
-
-.flag__container .flag__grid #croatia {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: croatia;
-  background-image: url(./flag_images/164-croatia.png);
-}
-
-.flag__container .flag__grid #croatia2 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 5;
-  grid-area: croatia2;
-  background-image: url(./flag_images/164-croatia.png);
-}
-
-.flag__container .flag__grid #mexico {
-  -ms-grid-row: 4;
-  -ms-grid-column: 3;
-  grid-area: mexico;
-  background-image: url(./flag_images/252-mexico.png);
-}
-
-.flag__container .flag__grid #mexico2 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 6;
-  grid-area: mexico2;
-  background-image: url(./flag_images/252-mexico.png);
-}
-
-.flag__container .flag__grid #mauritius {
-  -ms-grid-row: 2;
-  -ms-grid-column: 4;
-  grid-area: mauritius;
-  background-image: url(./flag_images/001-mauritius.png);
-}
-
-.flag__container .flag__grid #mauritius2 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 5;
-  grid-area: mauritius2;
-  background-image: url(./flag_images/001-mauritius.png);
-}
-
-.flag__container .flag__grid #puerto-rico {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: puerto-rico;
-  background-image: url(./flag_images/028-puerto-rico.png);
-}
-
-.flag__container .flag__grid #puerto-rico2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 5;
-  grid-area: puerto-rico2;
-  background-image: url(./flag_images/028-puerto-rico.png);
-}
-
-.flag__container .flag__grid #paraguay {
-  -ms-grid-row: 2;
-  -ms-grid-column: 6;
-  grid-area: paraguay;
-  background-image: url(./flag_images/041-paraguay.png);
-}
-
-.flag__container .flag__grid #paraguay2 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: paraguay2;
-  background-image: url(./flag_images/041-paraguay.png);
-}
-
-.flag__container .flag__grid #hungary {
-  -ms-grid-row: 3;
-  -ms-grid-column: 6;
-  grid-area: hungary;
-  background-image: url(./flag_images/115-hungary.png);
-}
-
-.flag__container .flag__grid #hungary2 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 2;
-  grid-area: hungary2;
-  background-image: url(./flag_images/115-hungary.png);
-}
-
-.match__message {
-  background-color: #a7ff83;
-  opacity: 88%;
-  position: absolute;
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: #071a52;
-  width: 100%;
-  text-align: center;
-}
-
-.match__message .match__country__header {
-  font-size: 60px;
-}
-
-.match__message .match__image {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.match__message .match__header {
-  font-size: 35px;
-}
-
-.match__message .match__subheader {
-  font-size: 35px;
-}
-
-.match__message .match__fact {
-  font-size: 35px;
-  padding-bottom: 50px;
-}
-
-.winning__message {
-  background-color: red;
-}
-
-.gameover__message {
-  opacity: 88%;
-  background-color: #a7ff83;
-  position: absolute;
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: #071a52;
-  width: 80%;
-  text-align: center;
-}
-
-.gameover__message .gameover__header {
-  font-size: 60px;
-}
-
-.gameover__message .game__subheader {
-  font-size: 35px;
-}
-
-.gameover__message .gameover__text {
-  font-size: 35px;
-}
-
-.gameover__message .gameover_button {
-  background-color: red;
-}
-
-.winning__message {
-  opacity: 88%;
-  background-color: #a7ff83;
-  position: absolute;
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: #071a52;
-  width: 80%;
-  text-align: center;
-}
-
-.winning__message .winning__header {
-  font-size: 60px;
-}
-
-.winning__message .winning__subheader {
-  font-size: 35px;
-}
-
-.winning__message .winning__text {
-  font-size: 35px;
+.flag__container .score__container .flag__gobutton {
+  background-color: #20e395;
+  color: #ffffff;
+  font-size: 70px;
+  font-weight: bolder;
 }
 
 .flag__image__animation {
@@ -536,5 +238,336 @@ body {
     -webkit-box-shadow: 0 0 0 0 #071a52;
             box-shadow: 0 0 0 0 #071a52;
   }
+}
+
+.flag__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 1vw;
+      grid-template-areas: "ireland italy colombia netherlands united-kingdom norway" "croatia puerto-rico ireland2 mauritius puerto-rico2 paraguay" "netherlands2 norway2 united-kingdom2 italy2 mauritius2 hungary" "paraguay2 hungary2 mexico colombia2 croatia2 mexico2";
+}
+
+.flag__grid .flag,
+.flag__grid .flag__pair {
+  height: 150px;
+  width: 250px;
+  background-size: 100%;
+  border-radius: 10px;
+  border: solid #071a52 10px;
+  cursor: pointer;
+}
+
+.flag__grid .flag .flag__image,
+.flag__grid .flag__pair .flag__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.flag__grid #ireland {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: ireland;
+  background-image: url(./flag_images/179-ireland.png);
+}
+
+.flag__grid #ireland2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: ireland2;
+  background-image: url(./flag_images/179-ireland.png);
+}
+
+.flag__grid #italy {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: italy;
+  background-image: url(./flag_images/013-italy.png);
+}
+
+.flag__grid #italy2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: italy2;
+  background-image: url(./flag_images/013-italy.png);
+}
+
+.flag__grid #colombia {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: colombia;
+  background-image: url(./flag_images/177-colombia.png);
+}
+
+.flag__grid #colombia2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: colombia2;
+  background-image: url(./flag_images/013-italy.png);
+}
+
+.flag__grid #netherlands {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: netherlands;
+  background-image: url(./flag_images/237-netherlands.png);
+}
+
+.flag__grid #netherlands2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: netherlands2;
+  background-image: url(./flag_images/237-netherlands.png);
+}
+
+.flag__grid #norway {
+  -ms-grid-row: 1;
+  -ms-grid-column: 6;
+  grid-area: norway;
+  background-image: url(./flag_images/143-norway.png);
+}
+
+.flag__grid #norway2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: norway2;
+  background-image: url(./flag_images/143-norway.png);
+}
+
+.flag__grid #united-kingdom {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: united-kingdom;
+  background-image: url(./flag_images/260-united-kingdom.png);
+}
+
+.flag__grid #united-kingdom2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: united-kingdom2;
+  background-image: url(./flag_images/260-united-kingdom.png);
+}
+
+.flag__grid #croatia {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: croatia;
+  background-image: url(./flag_images/164-croatia.png);
+}
+
+.flag__grid #croatia2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 5;
+  grid-area: croatia2;
+  background-image: url(./flag_images/164-croatia.png);
+}
+
+.flag__grid #mexico {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: mexico;
+  background-image: url(./flag_images/252-mexico.png);
+}
+
+.flag__grid #mexico2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 6;
+  grid-area: mexico2;
+  background-image: url(./flag_images/252-mexico.png);
+}
+
+.flag__grid #mauritius {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: mauritius;
+  background-image: url(./flag_images/001-mauritius.png);
+}
+
+.flag__grid #mauritius2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  grid-area: mauritius2;
+  background-image: url(./flag_images/001-mauritius.png);
+}
+
+.flag__grid #puerto-rico {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: puerto-rico;
+  background-image: url(./flag_images/028-puerto-rico.png);
+}
+
+.flag__grid #puerto-rico2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+  grid-area: puerto-rico2;
+  background-image: url(./flag_images/028-puerto-rico.png);
+}
+
+.flag__grid #paraguay {
+  -ms-grid-row: 2;
+  -ms-grid-column: 6;
+  grid-area: paraguay;
+  background-image: url(./flag_images/041-paraguay.png);
+}
+
+.flag__grid #paraguay2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: paraguay2;
+  background-image: url(./flag_images/041-paraguay.png);
+}
+
+.flag__grid #hungary {
+  -ms-grid-row: 3;
+  -ms-grid-column: 6;
+  grid-area: hungary;
+  background-image: url(./flag_images/115-hungary.png);
+}
+
+.flag__grid #hungary2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: hungary2;
+  background-image: url(./flag_images/115-hungary.png);
+}
+
+.match__message {
+  background-color: #20e395;
+  opacity: 90%;
+  position: absolute;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #071a52;
+  width: 100%;
+  text-align: center;
+}
+
+.match__message .match__country__header {
+  font-size: 60px;
+}
+
+.match__message .match__image {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.match__message .match__header {
+  font-size: 35px;
+}
+
+.match__message .match__subheader {
+  font-size: 35px;
+}
+
+.match__message .match__fact {
+  font-size: 35px;
+  padding-bottom: 50px;
+}
+
+.gameover__message {
+  opacity: 93%;
+  background-color: #20e395;
+  position: absolute;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #071a52;
+  width: 80%;
+  text-align: center;
+  margin: 100px auto;
+  color: #ffffff;
+}
+
+.gameover__message .gameover__header {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.gameover__message .gameover__subheader {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.gameover__message .gameover__button {
+  background-color: #f62a00;
+  color: #ffffff;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  padding: 20px 80px;
+  margin: 20px;
+  border: solid #ffffff 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.winning__message {
+  opacity: 93%;
+  background-color: #20e395;
+  position: absolute;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #071a52;
+  width: 80%;
+  text-align: center;
+  margin: 100px auto;
+  color: #ffffff;
+}
+
+.winning__message .winning__header {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.winning__message .winning__subheader {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+
+.winning__message .winning__text {
+  font-size: 35px;
+  padding-bottom: 100px;
 }
 /*# sourceMappingURL=main.css.map */

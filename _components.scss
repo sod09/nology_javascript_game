@@ -44,6 +44,7 @@ body {
 
     .intro__button {
       background-color: $color-tertiary-red;
+      color: $color-white;
       text-align: center;
       font-size: 56px;
       font-weight: bold;
@@ -124,8 +125,13 @@ body {
       font-weight: bold;
     }
 
+    .flag__instructions__arrow {
+      font-size: 100px;
+    }
+
     .flag__score,
-    .flag__timer {
+    .flag__timer,
+    .flag__gobutton {
       background-color: $color-tertiary-red;
       border: solid 10px $color-white;
       color: $color-white;
@@ -140,260 +146,115 @@ body {
     .flag__score {
       background-color: $color-base;
     }
-  }
 
-  .flag__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-gap: 1vw;
-    grid-template-areas:
-      "ireland italy colombia netherlands united-kingdom norway"
-      "croatia puerto-rico ireland2 mauritius puerto-rico2 paraguay"
-      "netherlands2 norway2 united-kingdom2 italy2 mauritius2 hungary"
-      "paraguay2 hungary2 mexico colombia2 croatia2 mexico2";
-
-    .flag,
-    .flag__pair {
-      height: 150px;
-      width: 250px;
-      background-size: 100%;
-      border-radius: 10px;
-      border: solid $color-base 10px;
-      cursor: pointer;
-
-      .flag__image {
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-      }
-    }
-
-    #ireland {
-      grid-area: ireland;
-      background-image: url(./flag_images/179-ireland.png);
-    }
-
-    #ireland2 {
-      grid-area: ireland2;
-      background-image: url(./flag_images/179-ireland.png);
-    }
-
-    #italy {
-      grid-area: italy;
-      background-image: url(./flag_images/013-italy.png);
-    }
-
-    #italy2 {
-      grid-area: italy2;
-      background-image: url(./flag_images/013-italy.png);
-    }
-
-    #colombia {
-      grid-area: colombia;
-      background-image: url(./flag_images/177-colombia.png);
-    }
-
-    #colombia2 {
-      grid-area: colombia2;
-      background-image: url(./flag_images/013-italy.png);
-    }
-
-    #netherlands {
-      grid-area: netherlands;
-      background-image: url(./flag_images/237-netherlands.png);
-    }
-
-    #netherlands2 {
-      grid-area: netherlands2;
-      background-image: url(./flag_images/237-netherlands.png);
-    }
-
-    #norway {
-      grid-area: norway;
-      background-image: url(./flag_images/143-norway.png);
-    }
-
-    #norway2 {
-      grid-area: norway2;
-      background-image: url(./flag_images/143-norway.png);
-    }
-
-    #united-kingdom {
-      grid-area: united-kingdom;
-      background-image: url(./flag_images/260-united-kingdom.png);
-    }
-
-    #united-kingdom2 {
-      grid-area: united-kingdom2;
-      background-image: url(./flag_images/260-united-kingdom.png);
-    }
-
-    #croatia {
-      grid-area: croatia;
-      background-image: url(./flag_images/164-croatia.png);
-    }
-
-    #croatia2 {
-      grid-area: croatia2;
-      background-image: url(./flag_images/164-croatia.png);
-    }
-
-    #mexico {
-      grid-area: mexico;
-      background-image: url(./flag_images/252-mexico.png);
-    }
-
-    #mexico2 {
-      grid-area: mexico2;
-      background-image: url(./flag_images/252-mexico.png);
-    }
-
-    #mauritius {
-      grid-area: mauritius;
-      background-image: url(./flag_images/001-mauritius.png);
-    }
-
-    #mauritius2 {
-      grid-area: mauritius2;
-      background-image: url(./flag_images/001-mauritius.png);
-    }
-
-    #puerto-rico {
-      grid-area: puerto-rico;
-      background-image: url(./flag_images/028-puerto-rico.png);
-    }
-
-    #puerto-rico2 {
-      grid-area: puerto-rico2;
-      background-image: url(./flag_images/028-puerto-rico.png);
-    }
-
-    #paraguay {
-      grid-area: paraguay;
-      background-image: url(./flag_images/041-paraguay.png);
-    }
-
-    #paraguay2 {
-      grid-area: paraguay2;
-      background-image: url(./flag_images/041-paraguay.png);
-    }
-
-    #hungary {
-      grid-area: hungary;
-      background-image: url(./flag_images/115-hungary.png);
-    }
-
-    #hungary2 {
-      grid-area: hungary2;
-      background-image: url(./flag_images/115-hungary.png);
+    .flag__gobutton {
+      background-color: $color-primary-lime;
+      color: $color-white;
+      font-size: 70px;
+      font-weight: bolder;
     }
   }
 }
 
-// .empty__div {
-//   width: 100vw;
-//   height: 100vh;
-//   z-index: 5;
-//   opacity: 1;
+// .match__message {
+//   background-color: $color-primary-lime;
+//   opacity: 90%;
+//   position: absolute;
+//   z-index: 2;
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+//   color: $color-base;
+//   width: 100%;
+//   text-align: center;
+
+//   .match__country__header {
+//     font-size: 60px;
+//   }
+
+//   .match__image {
+//     padding-top: 50px;
+//     padding-bottom: 50px;
+//   }
+
+//   .match__header {
+//     font-size: 35px;
+//   }
+
+//   .match__subheader {
+//     font-size: 35px;
+//   }
+
+//   .match__fact {
+//     font-size: 35px;
+//     padding-bottom: 50px;
+//   }
 // }
 
-.match__message {
-  background-color: $color-primary-lime;
-  opacity: 88%;
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  color: $color-base;
-  width: 100%;
-  text-align: center;
+// .gameover__message {
+//   opacity: 93%;
+//   background-color: $color-primary-lime;
+//   position: absolute;
+//   z-index: 2;
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+//   color: $color-base;
+//   width: 80%;
+//   text-align: center;
+//   margin: 100px auto;
+//   color: $color-white;
 
-  .match__country__header {
-    font-size: 60px;
-  }
+//   .gameover__header {
+//     text-align: center;
+//     padding-top: 100px;
+//     padding-bottom: 20px;
+//     font-size: 60px;
+//     font-weight: bold;
+//   }
 
-  .match__image {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
+//   .gameover__subheader {
+//     text-align: center;
+//     font-size: 50px;
+//     font-weight: bold;
+//     padding-bottom: 10px;
+//   }
 
-  .match__header {
-    font-size: 35px;
-  }
+//   .gameover__button {
+//     background-color: $color-tertiary-red;
+//     color: $color-white;
+//     text-align: center;
+//     font-size: 35px;
+//     font-weight: bold;
+//     padding: 20px 80px;
+//     margin: 20px;
+//     border: solid $color-white 10px;
+//     border-radius: 10px;
+//     cursor: pointer;
+//   }
+// }
 
-  .match__subheader {
-    font-size: 35px;
-  }
+// .winning__message {
+//   opacity: 88%;
+//   background-color: $color-primary-lime;
+//   position: absolute;
+//   z-index: 2;
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+//   color: $color-base;
+//   width: 80%;
+//   text-align: center;
 
-  .match__fact {
-    font-size: 35px;
-    padding-bottom: 50px;
-  }
-}
+//   .winning__header {
+//     font-size: 60px;
+//   }
 
-.winning__message {
-  background-color: red;
-}
+//   .winning__subheader {
+//     font-size: 35px;
+//   }
 
-.gameover__message {
-  opacity: 88%;
-  background-color: $color-primary-lime;
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  color: $color-base;
-  width: 80%;
-  text-align: center;
-  // border: solid $color-white 10px;
-  // border-radius: 10px;
-
-  // .gameover__gif {
-  //   height: 20%;
-  //   width: 20%;
-  // }
-
-  .gameover__header {
-    font-size: 60px;
-  }
-
-  .game__subheader {
-    font-size: 35px;
-  }
-
-  .gameover__text {
-    font-size: 35px;
-  }
-
-  .gameover_button {
-    background-color: red;
-  }
-}
-
-.winning__message {
-  opacity: 88%;
-  background-color: $color-primary-lime;
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  color: $color-base;
-  width: 80%;
-  text-align: center;
-
-  .winning__header {
-    font-size: 60px;
-  }
-
-  .winning__subheader {
-    font-size: 35px;
-  }
-
-  .winning__text {
-    font-size: 35px;
-  }
-}
+//   .winning__text {
+//     font-size: 35px;
+//   }
+// }

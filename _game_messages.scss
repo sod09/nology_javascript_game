@@ -1,0 +1,112 @@
+.match__message {
+  background-color: $color-primary-lime;
+  opacity: 90%;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: $color-base;
+  width: 100%;
+  text-align: center;
+
+  .match__country__header {
+    font-size: 60px;
+  }
+
+  .match__image {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .match__header {
+    font-size: 35px;
+  }
+
+  .match__subheader {
+    font-size: 35px;
+  }
+
+  .match__fact {
+    font-size: 35px;
+    padding-bottom: 50px;
+  }
+}
+
+.gameover__message {
+  opacity: 93%;
+  background-color: $color-primary-lime;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: $color-base;
+  width: 80%;
+  text-align: center;
+  margin: 100px auto;
+  color: $color-white;
+
+  .gameover__header {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    font-size: 80px;
+    font-weight: bold;
+  }
+
+  .gameover__subheader {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+
+  .gameover__button {
+    background-color: $color-tertiary-red;
+    color: $color-white;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 20px 80px;
+    margin: 20px;
+    border: solid $color-white 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
+.winning__message {
+  opacity: 93%;
+  background-color: $color-primary-lime;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: $color-base;
+  width: 80%;
+  text-align: center;
+  margin: 100px auto;
+  color: $color-white;
+
+  .winning__header {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 80px;
+    font-weight: bold;
+  }
+
+  .winning__subheader {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom: 50px;
+  }
+
+  .winning__text {
+    font-size: 35px;
+    padding-bottom: 100px;
+  }
+}

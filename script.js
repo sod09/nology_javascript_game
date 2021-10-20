@@ -63,40 +63,6 @@ function checkImages() {
   }
 }
 
-// function startGameTimer() {
-//   if (start) {
-//     start = false;
-//   }
-// function start30SecondsTimer() {
-//   let time = 30;
-//   flagTimer.innerHTML = time;
-//   interval = setInterval(() => {
-//     time -= 1;
-//     flagTimer.innerHTML = time;
-//     if (time <= 0) {
-//       stop30SecondsTimer();
-//     }
-//   }, 500);
-//   console.log(flagTimer);
-// }
-
-// function stop30SecondsTimer() {
-//   clearInterval(interval);
-// }
-
-// function start10SecondsTimer() {
-//   let time = 10;
-//   flagTimer.innerHTML = time;
-//   interval = setInterval(() => {
-//     time -= 1;
-//     flagTimer.innerHTML = time;
-//     if (time <= 0) {
-//       stop10SecondsTimer();
-//     }
-//   }, 1000);
-//   console.log(flagTimer);
-// }
-
 function startTimer(time) {
   let timer = time;
   flagTimer.innerHTML = timer;
@@ -125,6 +91,10 @@ matchMessage.addEventListener("click", () => {
 function itsAMatchMessage() {
   let nameInput = document.querySelector(".intro__nameinput").value;
   matchMessage.style.display = "flex";
+  matchMessage.style.borderStyle = "solid";
+  matchMessage.style.borderColor = "$color-white";
+  matchMessage.style.borderWidth = "10px";
+  matchMessage.style.borderRadius = "10px";
   matchMessage.innerHTML = `
   <img class="match__image" src= ${userChoices[0].imgSrc} />
   <h2 class="match__country__header">${userChoices[0].country}</h2>
@@ -137,11 +107,14 @@ function itsAMatchMessage() {
 function getWinningMessage() {
   let nameInput = document.querySelector(".intro__nameinput").value;
   winningMessage.style.display = "flex";
+  winningMessage.style.borderStyle = "solid";
+  winningMessage.style.borderColor = "$color-white";
+  winningMessage.style.borderWidth = "10px";
+  winningMessage.style.borderRadius = "10px";
   winningMessage.innerHTML = `
-  
-  <h1 class="winning __header">YOU'RE A WINNER!</h1>
-  <h2 class="winning__subheader">Super well done ${nameInput}!!</h2>
-  <p class="winning__text">You found all the pairs!</p>
+  <h1 class="winning__header">WINNER WINNER CHICKEN DINNER</h1>
+  <h2 class="winning__subheader">SUPER WELL DONE ${nameInput}!</h2>
+  <h2 class="winning__subheader">You found the pairs in ${flagTimer.innerHTML} seconds</h2>
   <p class="winning__text">It's official you've got the memory of an elephant.</p>`;
 }
 
@@ -150,25 +123,27 @@ function getWinningMessage() {
 function getEndOfGameMessage() {
   let nameInput = document.querySelector(".intro__nameinput").value;
   endOfGameMessage.style.display = "flex";
+  endOfGameMessage.style.borderStyle = "solid";
+  endOfGameMessage.style.borderColor = "$color-white";
+  endOfGameMessage.style.borderWidth = "10px";
+  endOfGameMessage.style.borderRadius = "10px";
   endOfGameMessage.innerHTML = `
-  <h1 class="gameover__header">Game Over!</h1>
-  <h2 class="gameover__subheader">Better luck next time ${nameInput}!!</h2>
-  <p class="gameover__text">You did not beat the timer!</p>
+  <h1 class="gameover__header">YOU SNOOZE YOU LOSE</h1></h1>
+ 
+  <h2 class="gameover__subheader">Better luck next time ${nameInput}.</h2>
   <button class="gameover__button"><a href=${introContainer}>Restart</a></button>`;
 }
-
+// <p class="gameover__subheader">You did not beat the timer.</p>
 // <iframe src="https://giphy.com/embed/MwIvOD6KuAdMiE9P5Z" width="312" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/amandaceemedia-teasing-amanda-cee-media-MwIvOD6KuAdMiE9P5Z">via GIPHY</a></p>
 
 function gameFinished() {
   if (flagScore.innerHTML == 12 && flagTimer.innerHTML > 0) {
-    alert("You're a winner!");
-    console.log("you're winning");
     getWinningMessage();
+    // getEndOfGameMessage();
   } else if (flagTimer.innerHTML == 0) {
-    console.log("you're losing");
     getEndOfGameMessage();
+    // getWinningMessage();
   }
-  console.log("end of game message working");
 }
 
 //  get 30 second timer in correct place so that it runs once
