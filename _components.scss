@@ -66,10 +66,6 @@ body {
     color: $color-white;
     text-align: center;
 
-    .instructions__email {
-      color: $color-white; /* Unvisited link  */
-    }
-
     .instructions__email:hover {
       color: $color-secondary-green;
     } /* Mouse over link */
