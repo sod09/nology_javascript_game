@@ -438,8 +438,8 @@ body {
 }
 
 .match__message {
+  opacity: 93%;
   background-color: #20e395;
-  opacity: 90%;
   position: absolute;
   z-index: 2;
   display: -webkit-box;
@@ -453,12 +453,18 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #071a52;
-  width: 100%;
+  width: 80%;
   text-align: center;
+  margin: auto;
+  color: #ffffff;
 }
 
 .match__message .match__country__header {
-  font-size: 60px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-size: 80px;
+  font-weight: bold;
 }
 
 .match__message .match__image {
@@ -467,16 +473,23 @@ body {
 }
 
 .match__message .match__header {
-  font-size: 35px;
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  padding-bottom: 20px;
 }
 
 .match__message .match__subheader {
   font-size: 35px;
+  font-weight: bold;
+  padding-bottom: 20px;
 }
 
 .match__message .match__fact {
   font-size: 35px;
   padding-bottom: 50px;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .gameover__message {

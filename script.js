@@ -38,7 +38,7 @@ btnGO.addEventListener("click", () => {
 });
 
 goButton.addEventListener("click", () => {
-  startTimer(30);
+  startTimer(60);
   goButton.style.display = "none";
   gameStart = true;
   setInterval(() => {
@@ -133,16 +133,20 @@ function getEndOfGameMessage() {
   <h2 class="gameover__subheader">Better luck next time ${nameInput}.</h2>
   <button class="gameover__button"><a href=${introContainer}>Restart</a></button>`;
 }
+
 // <p class="gameover__subheader">You did not beat the timer.</p>
 // <iframe src="https://giphy.com/embed/MwIvOD6KuAdMiE9P5Z" width="312" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/amandaceemedia-teasing-amanda-cee-media-MwIvOD6KuAdMiE9P5Z">via GIPHY</a></p>
 
 function gameFinished() {
   if (flagScore.innerHTML == 12 && flagTimer.innerHTML > 0) {
-    getWinningMessage();
-    // getEndOfGameMessage();
+    setInterval(() => {
+      matchMessage.style.display = "none";
+    }, 5000);
+    setInterval(() => {
+      getWinningMessage();
+    }, 5000);
   } else if (flagTimer.innerHTML == 0) {
     getEndOfGameMessage();
-    // getWinningMessage();
   }
 }
 
@@ -171,8 +175,7 @@ function checkMatch(image) {
   }
   setTimeout(() => {
     stopTimer();
-  }, 30000);
-  // console.log(userChoices);
+  }, 60000);
 }
 
 let gameStart = false;
@@ -180,7 +183,6 @@ let gameStart = false;
 countryFlags.forEach((country) => {
   const flagHTML = document.createElement("div");
   const flagImage = document.createElement("img");
-  // console.log(country);
   flagHTML.appendChild(flagImage);
   flagImage.classList.add("flag__image");
   flagHTML.classList.add(`${country.className}`);
@@ -190,17 +192,14 @@ countryFlags.forEach((country) => {
   flagHTML.addEventListener("click", () => {
     if (gameStart) {
       clickedImages.push(flagImage);
-      // console.log(clickedImages);
       flagImage.style.display = "block";
       userChoices.push(country);
-      // console.log(userChoices);
       checkMatch(flagImage);
     }
   });
 });
 
 const flags = document.querySelectorAll(".flag__image");
-// console.log(flags);
 
 instructionsContainer.addEventListener("click", flagScreen);
 
