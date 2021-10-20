@@ -5,7 +5,11 @@ body {
 // introduction page - this will hide when clicked
 
 .intro__container {
-  // display: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .intro__header {
     color: $color-white;
@@ -25,6 +29,7 @@ body {
 
   .intro__inputcontainer {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -56,18 +61,25 @@ body {
     }
   }
 
-  .instructions__signature {
+  .intro__signature {
     color: $color-white;
     text-align: center;
     padding-top: 200px;
   }
 
-  .instructions__icon {
-    color: $color-white;
+  .intro__icon {
     text-align: center;
 
-    .instructions__email:hover {
-      color: $color-secondary-green;
+    .intro__email:active {
+      color: $color-white;
+    } /* Selected link   */
+
+    .intro__email:visited {
+      color: $color-white;
+    } /* Mouse over link */
+
+    .intro__email:hover {
+      color: $color-white;
     } /* Mouse over link */
   }
 }
@@ -87,12 +99,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 100px auto;
+    margin: 50px auto;
     cursor: pointer;
 
     .instructions__header {
       text-align: center;
-      padding-top: 100px;
+      padding-top: 50px;
       padding-bottom: 60px;
       font-size: 60px;
       font-weight: bold;
@@ -103,6 +115,14 @@ body {
       font-size: 35px;
       font-weight: bold;
       padding: 50px;
+    }
+
+    .instructions__outro {
+      text-align: center;
+      padding-top: 50px;
+      padding-bottom: 60px;
+      font-size: 60px;
+      font-weight: bold;
     }
   }
 }

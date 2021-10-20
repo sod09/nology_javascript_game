@@ -12,17 +12,17 @@
   .flag,
   .flag__pair {
     height: 150px;
-    width: 250px;
+    width: 275px;
     background-size: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
     border: solid $color-base 10px;
     cursor: pointer;
+  }
 
-    .flag__image {
-      object-fit: cover;
-      height: 100%;
-      width: 100%;
-    }
+  .flag__image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
   }
 
   #ireland {
