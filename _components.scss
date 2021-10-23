@@ -14,8 +14,8 @@ body {
   .intro__header {
     color: $color-white;
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     font-size: 96px;
     font-weight: bold;
   }
@@ -38,7 +38,7 @@ body {
     border-radius: 10px;
     padding: 20px 20px;
     width: 30%;
-    margin: 100px auto;
+    margin: 40px auto;
 
     .intro__nameinput {
       font-size: 40px;
@@ -69,6 +69,11 @@ body {
 
   .intro__icon {
     text-align: center;
+    font-size: 10px;
+
+    .intro__email {
+      color: $color-white;
+    }
 
     .intro__email:active {
       color: $color-white;

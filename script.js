@@ -112,7 +112,9 @@ function getWinningMessage() {
   winningMessage.innerHTML = `
   <h1 class="winning__header">WINNER WINNER CHICKEN DINNER</h1>
   <h2 class="winning__subheader">SUPER WELL DONE ${nameInput}!</h2>
-  <h2 class="winning__subheader">You found the pairs in ${flagTimer.innerHTML} seconds</h2>
+  <h2 class="winning__subheader">You found the pairs with ${
+    60 - flagTimer.innerHTML
+  } seconds to go.</h2>
   <p class="winning__text">It's official you've got the memory of an elephant.</p>`;
 }
 
@@ -144,10 +146,12 @@ function gameFinished() {
       matchMessage.style.display = "none";
     }, 5000);
     setInterval(() => {
-      getWinningMessage();
+      // getWinningMessage();
+      getEndOfGameMessage();
     }, 5000);
   } else if (flagTimer.innerHTML == 0) {
-    getEndOfGameMessage();
+    // getEndOfGameMessage();
+    getWinningMessage();
   }
 }
 
