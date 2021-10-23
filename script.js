@@ -146,12 +146,12 @@ function gameFinished() {
       matchMessage.style.display = "none";
     }, 5000);
     setInterval(() => {
-      // getWinningMessage();
-      getEndOfGameMessage();
+      getWinningMessage();
+      // getEndOfGameMessage();
     }, 5000);
   } else if (flagTimer.innerHTML == 0) {
-    // getEndOfGameMessage();
-    getWinningMessage();
+    getEndOfGameMessage();
+    // getWinningMessage();
   }
 }
 
