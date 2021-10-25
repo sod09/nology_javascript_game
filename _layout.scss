@@ -374,32 +374,3 @@
   }
 }
 // @media screen and (max-width: 800px)
-
-// display: grid;
-// grid-template-columns: 1fr 1fr 1fr;
-// grid-template-rows: 1fr 1fr;
-// grid-gap: 1vw;
-// grid-template-areas:
-//   "flag__timerID flag__gobuttonID flag__scoreID"
-//   "flag__instructionsID flag__flagtotalID";
-// padding: 5px 5px;
-
-// #flag__timerID {
-//   grid-area: flag__timerID;
-// }
-
-// #flag__gobuttonID {
-//   grid-area: flag__gobuttonID;
-// }
-
-// #flag__scoreID {
-//   grid-area: flag__scoreID;
-// }
-
-// #flag__instructionsID {
-//   grid-area: flag__instructionsID;
-// }
-
-// #flag__flagtotalID {
-//   grid-area: flag__flagtotalID;
-// }
