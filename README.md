@@ -1,5 +1,7 @@
 # nology_javascript_game
 
+<ul>
+<li>Skills</li>
 Skills
 HTML
 CSS
