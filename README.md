@@ -1,20 +1,27 @@
 # nology_javascript_game
 
-<ul>
-<li>Skills</li>
 Skills
-HTML
-CSS
-SASS
-BEM
+
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>SASS</li>
+<li>BEM</li>
+</ul>
 
 JavaScript
-Array of Objects
-Dynamic Html created by JavaScript
-forEach()
-setTimer()
-setInterval()
-Pushing to Arrays
+
+<ul>
+<li>Array of Objects</li>
+<li>Dynamic Html created by JavaScript</li>
+<li>forEach()</li>
+<li>setTimer()</li>
+<li>setInterval()</li>
+<li>Event Listeners</li>
+<li>Pushing to arrays</li>
+</ul>
+
+Game Logic & Explanataion
 
 I wanted to create a memory game using flags.
 
