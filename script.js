@@ -187,12 +187,10 @@ function gameFinished() {
       matchMessage.style.display = "none";
     }, 5000);
     setInterval(() => {
-      // getWinningMessage();
-      getEndOfGameMessage();
+      getWinningMessage();
     }, 5000);
   } else if (flagTimer.innerHTML == 0) {
-    // getEndOfGameMessage();
-    getWinningMessage();
+    getEndOfGameMessage();
   }
 }
 
