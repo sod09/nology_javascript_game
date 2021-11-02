@@ -135,8 +135,19 @@ function getWinningMessage() {
   <h2 class="winning__subheader">You found the pairs with ${
     60 - flagTimer.innerHTML
   } seconds.</h2>
-  <p class="winning__text">It's official you've got the memory of an elephant.</p>`;
+  <p class="winning__text">It's official you've got the memory of an elephant.</p>
+  <button class="winning__button">Restart</button>`;
 }
+
+document
+  .querySelector(".winning__message")
+  .addEventListener("click", function (e) {
+    if (e.target.classList.contains("winning__button")) {
+      location.reload();
+    }
+  });
+
+// this allows the player to click the JavaScript button at when they have one and restart the game but back to the start of the game
 
 // this displays a Game over message at 0 seconds
 // dynamically creates the message using JavaScript
@@ -152,7 +163,7 @@ function getEndOfGameMessage() {
   <h1 class="gameover__header">YOU SNOOZE YOU LOSE</h1></h1>
  
   <h2 class="gameover__subheader">Better luck next time ${nameInput}.</h2>
-  <button class="gameover__button">Restart</a></button>`;
+  <button class="gameover__button">Restart</button>`;
 }
 
 // this allows the player to click the JavaScript button at game over and restart the game but back to the start of the game
@@ -176,10 +187,12 @@ function gameFinished() {
       matchMessage.style.display = "none";
     }, 5000);
     setInterval(() => {
-      getWinningMessage();
+      // getWinningMessage();
+      getEndOfGameMessage();
     }, 5000);
   } else if (flagTimer.innerHTML == 0) {
-    getEndOfGameMessage();
+    // getEndOfGameMessage();
+    getWinningMessage();
   }
 }
 

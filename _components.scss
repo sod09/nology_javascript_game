@@ -193,5 +193,10 @@ body {
       font-size: 70px;
       font-weight: bolder;
     }
+
+    .flag__gobutton:hover {
+      background-color: $color-secondary-green;
+      cursor: pointer;
+    }
   }
 }
