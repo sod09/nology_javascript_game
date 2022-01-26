@@ -35,16 +35,16 @@ Using click events on the intial pages, I was able to create a starter page and 
 Intially the user inserts their name which is used in pop ups at certain milestones in the game. 
 If the user does not insert a name, it will display an alert. 
 
-<img src="./intro-page.png">
+<img src="./game_images/intro-page.png">
 
 It then displays instructions to the game.
 
-<img src="./intro-instructions.png">
+<img src="./game_images/intro-instructions.png">
 
 Once the player inserts their name and clicks the button, the flags are displayed using dynamic JavaScript and then hidden after a set time.
 
 
-<img src="./flag_display_timer.png">
+<img src="./game_images/flag_display_timer.png">
 
 
 The player is then tasked with finding the flags and on each click, this info is pushed to array which targets a data file. This data file is array of objects with a country, flag image and fact.
@@ -52,7 +52,7 @@ The player is then tasked with finding the flags and on each click, this info is
 This information is then used to display a message when the play finds a match, displaying the country/flag and an interesting (?!) fact including their name too for added personalisation.
 
 
-<img src="./popup.png">
+<img src="./game_images/popup.png">
 
 
 Once the player finds all the pairs, it displays a personalised winning message.
