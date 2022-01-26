@@ -1,9 +1,9 @@
-# nology_javascript_game
+<h1>JavaScript Game Challenge - The Memory Game</h1>
 
-Skills
+<h2>Skills</h2>
 
 <ul>
-<li>HTML</li>
+<li>Semantic HTML</li>
 <li>CSS</li>
 <li>SASS</li>
 <li>BEM</li>
@@ -11,7 +11,7 @@ Skills
 <li>Git & GitHub</li>
 </ul>
 
-JavaScript
+<h2>JavaScript</h2>
 
 <ul>
 <li>Array of Objects</li>
@@ -23,7 +23,7 @@ JavaScript
 <li>Pushing to arrays</li>
 </ul>
 
-Game Logic & Explanataion
+<h2>Logic & Method</h2>
 
 We were tasked with creating our first vanilla JS game, I wanted to create a memory game using flags.
 
