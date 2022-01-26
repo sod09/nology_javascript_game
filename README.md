@@ -49,6 +49,8 @@ Once the player inserts their name and clicks the button, the flags are displaye
 
 The player is then tasked with finding the flags and on each click, this info is pushed to array which targets a data file. This data file is array of objects with a country, flag image and fact.
 
+<img src="./game_images/Animation.gif">
+
 This information is then used to display a message when the play finds a match, displaying the country/flag and an interesting (?!) fact including their name too for added personalisation.
 
 
