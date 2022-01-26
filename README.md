@@ -7,6 +7,8 @@ Skills
 <li>CSS</li>
 <li>SASS</li>
 <li>BEM</li>
+<li>Figma</li>
+<li>Git & GitHub</li>
 </ul>
 
 JavaScript
@@ -24,6 +26,8 @@ JavaScript
 Game Logic & Explanataion
 
 We were tasked with creating our first vanilla JS game, I wanted to create a memory game using flags.
+
+I intially designed the layout of the game on Figma **https://www.figma.com/file/K1zKeJSRECYxoke32vx50T/Untitled?node-id=0%3A1**
 
 The idea being that the player would need to memorise where the flags are on the screen and then have a set amount of time to find them.
 
