@@ -59,6 +59,6 @@ Once the player finds all the pairs, it displays a personalised winning message.
 If they do not find all the pairs before 0 seconds, it displays a game over message with a restart button.
 All game messages were created using dynamic JavaScript pulling down data from a data file of Country data.
 
-<img src="./gameover">
+<img src="./game_images/gameover.png">
 
 Several timers were used and functions to display styling to show and hide the flags at the appropriate times.
